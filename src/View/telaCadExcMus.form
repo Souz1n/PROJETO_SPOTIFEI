@@ -33,11 +33,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jf_ExcMus" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="60" max="32767" attributes="0"/>
                       <Component id="jf_CadMus" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jf_ConsMus" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -52,12 +52,12 @@
               <Component id="lbl_genMus" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="jf_ConsMus" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jf_ExcMus" max="32767" attributes="0"/>
                   <Component id="jf_CadMus" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,27 +78,19 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_cadMusYear" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cadMusName" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cadMusArt" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_cadMusStatus" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txt_cadMusArt" max="32767" attributes="0"/>
-                              <Component id="txt_cadMusNam" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_cadMusAno" alignment="0" min="-2" pref="283" max="-2" attributes="0"/>
-                              <Component id="txt_cadMusStatus" min="-2" pref="283" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                          <Component id="lbl_cadMusTitle" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="lbl_cadMusYear" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cadMusName" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cadMusArt" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_cadMusStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txt_cadMusArt" max="32767" attributes="0"/>
+                      <Component id="txt_cadMusNam" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txt_cadMusAno" alignment="0" min="-2" pref="283" max="-2" attributes="0"/>
+                      <Component id="txt_cadMusStatus" min="-2" pref="283" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="49" max="32767" attributes="0"/>
               </Group>
@@ -106,6 +98,11 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="bt_cadMus" min="-2" pref="88" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lbl_cadMusTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
