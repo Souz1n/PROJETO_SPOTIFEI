@@ -21,7 +21,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
      */
     public telaCadExcMus() {
         initComponents();
-        CGM = new ControleGenMus(this);
+        cgm = new ControleGenMus(this);
     }
 
     public JButton getBt_cadMus() {
@@ -200,13 +200,6 @@ public class telaCadExcMus extends javax.swing.JFrame {
         this.txt_cadMusNam = txt_cadMusNam;
     }
 
-    public JTextField getTxt_cadMusStatus() {
-        return txt_cadMusStatus;
-    }
-
-    public void setTxt_cadMusStatus(JTextField txt_cadMusStatus) {
-        this.txt_cadMusStatus = txt_cadMusStatus;
-    }
 
     public JTextField getTxt_consMusArt() {
         return txt_consMusArt;
@@ -248,6 +241,16 @@ public class telaCadExcMus extends javax.swing.JFrame {
         this.txt_excMusStatus = txt_excMusStatus;
     }
 
+    public JLabel getLbl_cadMusResult() {
+        return lbl_cadMusResult;
+    }
+
+    public void setLbl_cadMusResult(JLabel lbl_cadMusResult) {
+        this.lbl_cadMusResult = lbl_cadMusResult;
+    }
+    
+    
+
     
     
     /**
@@ -269,7 +272,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         txt_cadMusAno = new javax.swing.JTextField();
         bt_cadMus = new javax.swing.JButton();
         lbl_cadMusStatus = new javax.swing.JLabel();
-        txt_cadMusStatus = new javax.swing.JTextField();
+        lbl_cadMusResult = new javax.swing.JLabel();
         lbl_genMus = new javax.swing.JLabel();
         jf_ExcMus = new javax.swing.JPanel();
         lbl_excMusTitle = new javax.swing.JLabel();
@@ -327,21 +330,29 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
         bt_cadMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_cadMus.setText("Cadastrar");
+        bt_cadMus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_cadMusActionPerformed(evt);
+            }
+        });
 
         lbl_cadMusStatus.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
         lbl_cadMusStatus.setText("Status");
 
-        txt_cadMusStatus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_cadMusStatus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadMusStatusActionPerformed(evt);
-            }
-        });
+        lbl_cadMusResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jf_CadMusLayout = new javax.swing.GroupLayout(jf_CadMus);
         jf_CadMus.setLayout(jf_CadMusLayout);
         jf_CadMusLayout.setHorizontalGroup(
             jf_CadMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_CadMusLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(bt_cadMus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(155, 155, 155))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_CadMusLayout.createSequentialGroup()
+                .addContainerGap(160, Short.MAX_VALUE)
+                .addComponent(lbl_cadMusTitle)
+                .addGap(130, 130, 130))
             .addGroup(jf_CadMusLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(jf_CadMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,17 +364,9 @@ public class telaCadExcMus extends javax.swing.JFrame {
                 .addGroup(jf_CadMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_cadMusArt)
                     .addComponent(txt_cadMusNam)
-                    .addComponent(txt_cadMusAno, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_cadMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_CadMusLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bt_cadMus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(155, 155, 155))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_CadMusLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_cadMusTitle)
-                .addGap(130, 130, 130))
+                    .addComponent(txt_cadMusAno, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                    .addComponent(lbl_cadMusResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jf_CadMusLayout.setVerticalGroup(
             jf_CadMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,8 +390,8 @@ public class telaCadExcMus extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jf_CadMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_cadMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_cadMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47))
+                    .addComponent(lbl_cadMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49))
         );
 
         lbl_genMus.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
@@ -561,12 +564,12 @@ public class telaCadExcMus extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jf_ExcMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jf_CadMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 25, Short.MAX_VALUE)
                         .addComponent(jf_ConsMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -613,9 +616,9 @@ public class telaCadExcMus extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_excMusStatusActionPerformed
 
-    private void txt_cadMusStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadMusStatusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cadMusStatusActionPerformed
+    private void bt_cadMusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cadMusActionPerformed
+        cgm.cadastrarMusica();
+    }//GEN-LAST:event_bt_cadMusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -653,7 +656,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
 //    }
 
     
-    private ControleGenMus CGM;
+    private ControleGenMus cgm;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_cadMus;
     private javax.swing.JButton bt_consMusIdMus;
@@ -663,6 +666,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
     private javax.swing.JPanel jf_ExcMus;
     private javax.swing.JLabel lbl_cadMusArt;
     private javax.swing.JLabel lbl_cadMusName;
+    private javax.swing.JLabel lbl_cadMusResult;
     private javax.swing.JLabel lbl_cadMusStatus;
     private javax.swing.JLabel lbl_cadMusTitle;
     private javax.swing.JLabel lbl_cadMusYear;
@@ -677,7 +681,6 @@ public class telaCadExcMus extends javax.swing.JFrame {
     private javax.swing.JTextField txt_cadMusAno;
     private javax.swing.JTextField txt_cadMusArt;
     private javax.swing.JTextField txt_cadMusNam;
-    private javax.swing.JTextField txt_cadMusStatus;
     private javax.swing.JTextField txt_consMusArt;
     private javax.swing.JTextField txt_consMusIdMus;
     private javax.swing.JTextField txt_consMusNam;
