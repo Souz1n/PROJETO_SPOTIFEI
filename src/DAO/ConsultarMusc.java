@@ -1,19 +1,34 @@
-//package DAO;
-//
-//import Model.CadMus;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//
-//public class ConsultarMusc {
-//   public ResultSet consultar(CadMus musica) throws SQLException {
-//    String sql = "select * from musica where nome = ? and artista = ?";
-//    PreparedStatement statement = conn.prepareStatement(sql);
-//    statement.setString(1, musica.getNome());
-//    statement.setString(2, musica.getArtista());
-//    statement.execute();
-//    ResultSet resultado = statement.getResultSet();
-//    return resultado;
-//    
-//    }
-//}
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ConsultarMusc {
+    
+    private Connection conn;
+
+    public ConsultarMusc(Connection conn) {
+        this.conn = conn;
+    }
+
+    public int consultarIdMusica(String nome, String artista) {
+        String sql = "SELECT id_musica FROM musica WHERE nome = ? AND artista = ?";
+        
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nome);
+            stmt.setString(2, artista);
+
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("id_musica");
+            } else {
+                return -1; 
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao consultar música: " + e.getMessage());
+            return -1;
+        }
+    }
+}

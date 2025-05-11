@@ -4,6 +4,7 @@
  */
 package View;
 
+import Controller.ControleConsultMusc;
 import Controller.ControleGenMus;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -15,13 +16,13 @@ import javax.swing.JTextField;
  * @author unifbcosta
  */
 public class telaCadExcMus extends javax.swing.JFrame {
-
     /**
      * Creates new form telaCadExcMus
      */
     public telaCadExcMus() {
         initComponents();
         cgm = new ControleGenMus(this);
+        ccm = new ControleConsultMusc(this);
     }
 
     public JButton getBt_cadMus() {
@@ -443,7 +444,6 @@ public class telaCadExcMus extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txt_excMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(bt_excMus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(49, 49, 49)))
                         .addContainerGap(110, Short.MAX_VALUE))
@@ -483,6 +483,11 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_consMusArt.setText("Artista");
 
         txt_consMusArt.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_consMusArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_consMusArtActionPerformed(evt);
+            }
+        });
 
         lbl_consMusIdMus.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
         lbl_consMusIdMus.setText("ID da Música");
@@ -496,6 +501,11 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
         bt_consMusIdMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_consMusIdMus.setText("Consultar");
+        bt_consMusIdMus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consMusIdMusActionPerformed(evt);
+            }
+        });
 
         lbl_consMusResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
 
@@ -614,6 +624,14 @@ public class telaCadExcMus extends javax.swing.JFrame {
         cgm.removerMusica();
     }//GEN-LAST:event_bt_excMusActionPerformed
 
+    private void bt_consMusIdMusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consMusIdMusActionPerformed
+        ccm.consultarIdMusica();
+    }//GEN-LAST:event_bt_consMusIdMusActionPerformed
+
+    private void txt_consMusArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_consMusArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_consMusArtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -650,7 +668,9 @@ public class telaCadExcMus extends javax.swing.JFrame {
 //    }
 
     
-    private ControleGenMus cgm;
+    private final ControleGenMus cgm;
+    private final ControleConsultMusc ccm;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_cadMus;
     private javax.swing.JButton bt_consMusIdMus;
