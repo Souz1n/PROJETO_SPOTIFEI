@@ -4,7 +4,6 @@
  */
 package View;
 
-import Controller.ControleConsultMusc;
 import Controller.ControleGenMus;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -22,7 +21,6 @@ public class telaCadExcMus extends javax.swing.JFrame {
     public telaCadExcMus() {
         initComponents();
         cgm = new ControleGenMus(this);
-        ccm = new ControleConsultMusc(this);
     }
 
     public JButton getBt_cadMus() {
@@ -531,8 +529,8 @@ public class telaCadExcMus extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(lbl_consMusIdMus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbl_consMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(139, 139, 139))
+                .addComponent(lbl_consMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         jf_ConsMusLayout.setVerticalGroup(
             jf_ConsMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -551,11 +549,10 @@ public class telaCadExcMus extends javax.swing.JFrame {
                             .addComponent(txt_consMusArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jf_ConsMusLayout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addGroup(jf_ConsMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_consMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jf_ConsMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lbl_consMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bt_consMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(jf_ConsMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_consMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_consMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_consMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
@@ -625,7 +622,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_excMusActionPerformed
 
     private void bt_consMusIdMusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consMusIdMusActionPerformed
-        ccm.consultarIdMusica();
+        cgm.consultarIdMusica();
     }//GEN-LAST:event_bt_consMusIdMusActionPerformed
 
     private void txt_consMusArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_consMusArtActionPerformed
@@ -669,7 +666,6 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
     
     private final ControleGenMus cgm;
-    private final ControleConsultMusc ccm;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_cadMus;

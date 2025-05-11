@@ -5,16 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ConsultarMusc {
+public class ConsMuscDAO {
     
     private Connection conn;
 
-    public ConsultarMusc(Connection conn) {
+    public ConsMuscDAO(Connection conn) {
         this.conn = conn;
     }
 
     public int consultarIdMusica(String nome, String artista) {
-        String sql = "SELECT id_musica FROM musica WHERE nome = ? AND artista = ?";
+        String sql = "SELECT id_musica FROM musica WHERE nome = ? AND artista ="
+                + " ?";
         
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nome);
