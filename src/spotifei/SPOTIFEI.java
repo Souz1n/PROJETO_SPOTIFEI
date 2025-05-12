@@ -1,11 +1,11 @@
 package spotifei;
 
-import View.telaCadExcMus;
+import View.telaLogCad;
 
 public class SPOTIFEI {
 
     public static void main(String[] args) {
-        telaCadExcMus lf = new telaCadExcMus();
+        telaLogCad lf = new telaLogCad();
         lf.setVisible(true);
     }
 }
