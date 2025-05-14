@@ -118,6 +118,7 @@ public class telaLogCad extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        bt_loginUsuario.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_loginUsuario.setText("Login Usuário");
         bt_loginUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +126,7 @@ public class telaLogCad extends javax.swing.JFrame {
             }
         });
 
+        bt_loginADM.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_loginADM.setText("Login ADM");
         bt_loginADM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +134,7 @@ public class telaLogCad extends javax.swing.JFrame {
             }
         });
 
+        bt_cadastrar.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_cadastrar.setText("Cadastrar");
         bt_cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,24 +142,30 @@ public class telaLogCad extends javax.swing.JFrame {
             }
         });
 
+        txt_nomeLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_nomeLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_nomeLoginActionPerformed(evt);
             }
         });
 
+        txt_senhaLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_senhaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_senhaLoginActionPerformed(evt);
             }
         });
 
+        lbl_nomeLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lbl_nomeLogin.setText("Usuário: ");
 
+        lbl_senhaLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lbl_senhaLogin.setText("Senha: ");
 
-        lbl_tituloLogin.setText("Login e Cadastro");
+        lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloLogin.setText("Login");
 
+        txt_textoAviso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_textoAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_textoAvisoActionPerformed(evt);
@@ -172,7 +181,7 @@ public class telaLogCad extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bt_loginADM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bt_loginUsuario)
                         .addGap(32, 32, 32)
                         .addComponent(bt_cadastrar)
@@ -181,7 +190,7 @@ public class telaLogCad extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_nomeLogin)
                             .addComponent(lbl_senhaLogin))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -190,17 +199,17 @@ public class telaLogCad extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(txt_textoAviso)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(163, 163, 163)
                 .addComponent(lbl_tituloLogin)
-                .addGap(158, 158, 158))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(8, 8, 8)
+                .addContainerGap()
                 .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nomeLogin))
@@ -208,7 +217,7 @@ public class telaLogCad extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_senhaLogin))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_loginUsuario)
                     .addComponent(bt_loginADM)
@@ -230,7 +239,7 @@ public class telaLogCad extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_nomeLoginActionPerformed
 
     private void bt_loginADMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginADMActionPerformed
-
+      cl.fazerLoginAdm();
     }//GEN-LAST:event_bt_loginADMActionPerformed
 
     private void txt_textoAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_textoAvisoActionPerformed

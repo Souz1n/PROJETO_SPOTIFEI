@@ -1,10 +1,10 @@
 package Controller;
 
-import DAO.Conexao;
 import View.telaLogCad;
+import View.telaMenuAdm;
 import Model.LogUserAdm;
-import java.sql.Connection;
-import java.sql.SQLException;
+
+
 
 public class ControleLogin{
 
@@ -19,19 +19,18 @@ public class ControleLogin{
         String senha = view.getTxt_senhaLogin().getText();
         
         LogUserAdm loginADM = new LogUserAdm();
-        LogUserAdm.setNome(usuario);
-        LogUserAdm.setSenha(usuario);
+        loginADM.setNome(usuario);
+        loginADM.setSenha(senha);
 
-        try {
-            Connection conn = new Conexao().getConnection();
-            CadMuscDAO dao = new CadMuscDAO(conn);
-            dao.inserir(LogUserAdm);
-            view.getTxt_textoAviso().setText("Música cadastrada com "
-                    + "sucesso!");
-        } 
-        catch (SQLException e) {
-            view.getTxt_textoAviso().setText("Erro ao cadastrar música: " + 
-                    e.getMessage());
+            if(usuario.equals("adm") & senha.equals("123")){
+                view.getTxt_textoAviso().setText("Login efetuado com sucesso!");            
+            telaMenuAdm tma = new telaMenuAdm();
+            tma.setVisible(true);
+            view.dispose();//fecha o o painel login
+                
+            }else{
+            view.getTxt_textoAviso().setText("Erro ao fazer login, tente "
+            + "novamente ");
         }
     }
 }

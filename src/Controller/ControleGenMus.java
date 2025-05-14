@@ -10,6 +10,7 @@ import Model.CadMus;
 import Model.ExcMus;
 import Model.ConsMus;
 import View.telaCadExcMus;
+import View.telaMenuAdm;
 
 public class ControleGenMus {
     
@@ -84,5 +85,11 @@ public class ControleGenMus {
         } catch (SQLException e) {
             view.getLbl_consMusResult().setText("Erro ao consultar: " + e.getMessage());
         }
+    }
+    
+    public void voltaMenu(){
+        telaMenuAdm tma = new telaMenuAdm();
+        tma.setVisible(true);
+        view.dispose();//fecha o menu
     }
 }
