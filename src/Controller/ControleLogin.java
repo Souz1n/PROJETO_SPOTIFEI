@@ -2,6 +2,7 @@ package Controller;
 
 import View.telaLogCad;
 import View.telaMenuAdm;
+import View.telaCadUser;
 import Model.LogUserAdm;
 
 
@@ -32,5 +33,10 @@ public class ControleLogin{
             view.getTxt_textoAviso().setText("Erro ao fazer login, tente "
             + "novamente ");
         }
+    }
+    public void telaCadUser(){
+        telaCadUser tcu = new telaCadUser();
+        tcu.setVisible(true);
+        view.dispose();//fecha o menu
     }
 }

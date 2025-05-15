@@ -247,7 +247,7 @@ public class telaLogCad extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_textoAvisoActionPerformed
 
     private void bt_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cadastrarActionPerformed
-        // TODO add your handling code here:
+        cl.telaCadUser();
     }//GEN-LAST:event_bt_cadastrarActionPerformed
 
     private void txt_senhaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_senhaLoginActionPerformed
