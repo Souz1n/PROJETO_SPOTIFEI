@@ -90,6 +90,6 @@ public class ControleGenMus {
     public void voltaMenu(){
         telaMenuAdm tma = new telaMenuAdm();
         tma.setVisible(true);
-        view.dispose();//fecha o menu
+        view.dispose();
     }
 }

@@ -1,17 +1,16 @@
+
 package Model;
 
-public class CadUser {
-    private String nome, email, senha;
-    private int id_pessoa;
+public class ConsUser {
+    
+    String nome, email, senha;
 
-    public CadUser() {
+    public ConsUser() {
     }
 
-    public CadUser(String nome, String email, int id_pessoa, 
-            String senha) {
+    public ConsUser(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
-        this.id_pessoa =  id_pessoa;
         this.senha = senha;
     }
 
@@ -22,15 +21,6 @@ public class CadUser {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public int getId_pessoa() {
-        return id_pessoa;
-    }
-
-    public void setId_pessoa(int id_pessoa) {
-        this.id_pessoa = id_pessoa;
-    }
-
 
     public String getEmail() {
         return email;
@@ -47,7 +37,5 @@ public class CadUser {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    
     
 }

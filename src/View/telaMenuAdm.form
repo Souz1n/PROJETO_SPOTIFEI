@@ -107,6 +107,9 @@
         <Property name="text" type="java.lang.String" value="Consultar Usu&#xe1;rios"/>
         <Property name="actionCommand" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consUserMenuAdmActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bt_cadArtMenuAdm">
       <Properties>

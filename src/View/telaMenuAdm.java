@@ -39,6 +39,11 @@ public class telaMenuAdm extends javax.swing.JFrame {
         bt_consUserMenuAdm.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_consUserMenuAdm.setText("Consultar Usuários");
         bt_consUserMenuAdm.setActionCommand("");
+        bt_consUserMenuAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consUserMenuAdmActionPerformed(evt);
+            }
+        });
 
         bt_cadArtMenuAdm.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_cadArtMenuAdm.setText("Cadastar Artistas");
@@ -127,6 +132,10 @@ public class telaMenuAdm extends javax.swing.JFrame {
     private void bt_cadArtMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cadArtMenuAdmActionPerformed
         cma.telaGenArt();
     }//GEN-LAST:event_bt_cadArtMenuAdmActionPerformed
+
+    private void bt_consUserMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consUserMenuAdmActionPerformed
+        cma.telaGonsUser();
+    }//GEN-LAST:event_bt_consUserMenuAdmActionPerformed
 
 //    public static void main(String args[]) {;
 //        /* Set the Nimbus look and feel */

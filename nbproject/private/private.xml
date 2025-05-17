@@ -22,6 +22,14 @@
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/CadArt.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleGenArt.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CadArtDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaCadUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleCadUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CadUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/CadUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaConsUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/ConsUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ConsUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleConsUser.java</file>
         </group>
     </open-files>
 </project-private>

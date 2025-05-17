@@ -2,7 +2,7 @@ package Controller;
 
 import DAO.CadUserDAO;
 import DAO.Conexao;
-import Model.Caduser;
+import Model.CadUser;
 import View.telaCadUser;
 import View.telaMenuAdm;
 import java.sql.Connection;
@@ -18,29 +18,41 @@ public class ControleCadUser {
 
     public void cadastrarUsuario() {
      
-        String nome = view.getTxt_cadNome().getText();
-        String email = view.getTxt_cadEmail().getText();
-        int idade = Integer.parseInt(view.getTxt_cadIdade().getText());
+        String nome = view.getTxt_cadUserNome().getText();
+        String email = view.getTxt_cadUserEmail().getText();
+        String senha = view.getTxt_cadUserSenha().getText();
 
         
-        Caduser usuario = new Caduser(nome, email, idade);
+        CadUser usuario = new CadUser();
+        usuario.setNome(nome);
+        usuario.setEmail(email);
+        usuario.setSenha(senha);
 
         try {
-            
             Connection conn = new Conexao().getConnection();
             CadUserDAO dao = new CadUserDAO(conn);
-            dao.inserir(usuario);
-
-            System.out.println("Usuário cadastrado com sucesso!"); 
+            dao.inserirPessoa(usuario);
+            dao.inserirUsuario(usuario);
+            conn.close();
+            System.out.println("ID da pessoa inserida: " + usuario.getId_pessoa());
+            view.getLbl_cadUserResult().setText("Usuário cadastrado com "
+                    + "sucesso!");
+        } catch (NumberFormatException e) {
+            view.getLbl_cadUserResult().setText("Idade deve ser um número.");
         } catch (SQLException e) {
-            System.err.println("Erro ao cadastrar usuário: " + e.getMessage());
+            view.getLbl_cadUserResult().setText("Erro ao cadastrar usuário: " + 
+                    e.getMessage());
         }
+
     }
+    
      public void voltaMenu(){
         telaMenuAdm tma = new telaMenuAdm();
         tma.setVisible(true);
         view.dispose();
     }
+     
+
 }
 
 

@@ -18,23 +18,30 @@ public class ControleGenArt {
     }
     
     public void cadastrarArtista() {
-        String nome_artista = view.getTxt_cadNomeArt().getText();
+        String nome = view.getTxt_cadNomeArt().getText();
         String banda = view.getTxt_cadBandaArt().getText();
+        String email = view.getTxt_cadEmailArtGenArt().getText();
+        
 
         CadArt artista = new CadArt();
-        artista.setNome(nome_artista);
+        artista.setNome(nome);
         artista.setBanda(banda);
+        artista.setEmail(email);
 
 
         try {
             Connection conn = new Conexao().getConnection();
             CadArtDAO dao = new CadArtDAO(conn);
-            dao.inserir(artista);
+            dao.inserirPessoa(artista);
+            dao.inserirArtista(artista);   
+            conn.close();
+            System.out.println("ID da pessoa inserida: " + artista.getId_pessoa());
             view.getLbl_cadArtResult().setText("Artista cadastrado com "
                     + "sucesso!");
-        } 
-        catch (SQLException e) {
-            view.getLbl_cadArtResult().setText("Erro ao cadastrar artista: " + 
+        } catch (NumberFormatException e) {
+            view.getLbl_cadArtResult().setText("Idade deve ser um número.");
+        } catch (SQLException e) {
+            view.getLbl_cadArtResult().setText("Erro ao cadastrar usuário: " + 
                     e.getMessage());
         }
     }

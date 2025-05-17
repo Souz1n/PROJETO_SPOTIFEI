@@ -32,6 +32,14 @@ public class telaCadUser extends javax.swing.JFrame {
         this.bt_cadUser = bt_cadUser;
     }
 
+    public JButton getBt_voltarCadUser() {
+        return bt_voltarCadUser;
+    }
+
+    public void setBt_voltarCadUser(JButton bt_voltarCadUser) {
+        this.bt_voltarCadUser = bt_voltarCadUser;
+    }
+
     public JComboBox<String> getjComboBox1() {
         return jComboBox1;
     }
@@ -40,61 +48,63 @@ public class telaCadUser extends javax.swing.JFrame {
         this.jComboBox1 = jComboBox1;
     }
 
-    public JLabel getLbl_cadEmail() {
-        return lbl_cadEmail;
+    public JLabel getLbl_cadUserEmail() {
+        return lbl_cadUserEmail;
     }
 
-    public void setLbl_cadEmail(JLabel lbl_cadEmail) {
-        this.lbl_cadEmail = lbl_cadEmail;
+    public void setLbl_cadUserEmail(JLabel lbl_cadUserEmail) {
+        this.lbl_cadUserEmail = lbl_cadUserEmail;
     }
 
-    public JLabel getLbl_cadIdade() {
-        return lbl_cadIdade;
+    public JLabel getLbl_cadUserNome() {
+        return lbl_cadUserNome;
     }
 
-    public void setLbl_cadIdade(JLabel lbl_cadIdade) {
-        this.lbl_cadIdade = lbl_cadIdade;
+    public void setLbl_cadUserNome(JLabel lbl_cadUserNome) {
+        this.lbl_cadUserNome = lbl_cadUserNome;
     }
 
-    public JLabel getLbl_cadNome() {
-        return lbl_cadNome;
+    public JLabel getLbl_cadUserResult() {
+        return lbl_cadUserResult;
     }
 
-    public void setLbl_cadNome(JLabel lbl_cadNome) {
-        this.lbl_cadNome = lbl_cadNome;
+    public void setLbl_cadUserResult(JLabel lbl_cadUserResult) {
+        this.lbl_cadUserResult = lbl_cadUserResult;
     }
 
-    public JLabel getLbl_tituloCadUser() {
-        return lbl_tituloCadUser;
+    public JLabel getLbl_cadUserSenha() {
+        return lbl_cadUserSenha;
     }
 
-    public void setLbl_tituloCadUser(JLabel lbl_tituloCadUser) {
-        this.lbl_tituloCadUser = lbl_tituloCadUser;
+    public void setLbl_cadUserSenha(JLabel lbl_cadUserSenha) {
+        this.lbl_cadUserSenha = lbl_cadUserSenha;
     }
 
-    public JTextField getTxt_cadEmail() {
-        return txt_cadEmail;
+    public JTextField getTxt_cadUserEmail() {
+        return txt_cadUserEmail;
     }
 
-    public void setTxt_cadEmail(JTextField txt_cadEmail) {
-        this.txt_cadEmail = txt_cadEmail;
+    public void setTxt_cadUserEmail(JTextField txt_cadUserEmail) {
+        this.txt_cadUserEmail = txt_cadUserEmail;
     }
 
-    public JTextField getTxt_cadIdade() {
-        return txt_cadIdade;
+    public JTextField getTxt_cadUserNome() {
+        return txt_cadUserNome;
     }
 
-    public void setTxt_cadIdade(JTextField txt_cadIdade) {
-        this.txt_cadIdade = txt_cadIdade;
+    public void setTxt_cadUserNome(JTextField txt_cadUserNome) {
+        this.txt_cadUserNome = txt_cadUserNome;
     }
 
-    public JTextField getTxt_cadNome() {
-        return txt_cadNome;
+    public JTextField getTxt_cadUserSenha() {
+        return txt_cadUserSenha;
     }
 
-    public void setTxt_cadNome(JTextField txt_cadNome) {
-        this.txt_cadNome = txt_cadNome;
+    public void setTxt_cadUserSenha(JTextField txt_cadUserSenha) {
+        this.txt_cadUserSenha = txt_cadUserSenha;
     }
+
+
     
     
 
@@ -108,15 +118,16 @@ public class telaCadUser extends javax.swing.JFrame {
     private void initComponents() {
 
         jComboBox1 = new javax.swing.JComboBox<>();
-        lbl_tituloCadUser = new javax.swing.JLabel();
-        txt_cadNome = new javax.swing.JTextField();
-        txt_cadIdade = new javax.swing.JTextField();
-        txt_cadEmail = new javax.swing.JTextField();
-        lbl_cadNome = new javax.swing.JLabel();
-        lbl_cadEmail = new javax.swing.JLabel();
-        lbl_cadIdade = new javax.swing.JLabel();
+        javax.swing.JLabel lbl_tituloCadUser = new javax.swing.JLabel();
+        txt_cadUserNome = new javax.swing.JTextField();
+        txt_cadUserEmail = new javax.swing.JTextField();
+        lbl_cadUserNome = new javax.swing.JLabel();
+        lbl_cadUserEmail = new javax.swing.JLabel();
         bt_cadUser = new javax.swing.JButton();
-        bt_voltarGenArt = new javax.swing.JButton();
+        bt_voltarCadUser = new javax.swing.JButton();
+        lbl_cadUserResult = new javax.swing.JLabel();
+        lbl_cadUserSenha = new javax.swing.JLabel();
+        txt_cadUserSenha = new javax.swing.JTextField();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -125,35 +136,25 @@ public class telaCadUser extends javax.swing.JFrame {
         lbl_tituloCadUser.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
         lbl_tituloCadUser.setText("CADASTRAR USUÁRIOS");
 
-        txt_cadNome.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_cadNome.addActionListener(new java.awt.event.ActionListener() {
+        txt_cadUserNome.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_cadUserNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadNomeActionPerformed(evt);
+                txt_cadUserNomeActionPerformed(evt);
             }
         });
 
-        txt_cadIdade.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_cadIdade.addActionListener(new java.awt.event.ActionListener() {
+        txt_cadUserEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_cadUserEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadIdadeActionPerformed(evt);
+                txt_cadUserEmailActionPerformed(evt);
             }
         });
 
-        txt_cadEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_cadEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadEmailActionPerformed(evt);
-            }
-        });
+        lbl_cadUserNome.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserNome.setText("Nome:");
 
-        lbl_cadNome.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadNome.setText("Nome:");
-
-        lbl_cadEmail.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadEmail.setText("Email:");
-
-        lbl_cadIdade.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadIdade.setText("Idade:");
+        lbl_cadUserEmail.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserEmail.setText("Email:");
 
         bt_cadUser.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_cadUser.setText("CADASTRAR");
@@ -163,12 +164,24 @@ public class telaCadUser extends javax.swing.JFrame {
             }
         });
 
-        bt_voltarGenArt.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
-        bt_voltarGenArt.setText("Voltar");
-        bt_voltarGenArt.setActionCommand("");
-        bt_voltarGenArt.addActionListener(new java.awt.event.ActionListener() {
+        bt_voltarCadUser.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarCadUser.setText("Voltar");
+        bt_voltarCadUser.setActionCommand("");
+        bt_voltarCadUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_voltarGenArtActionPerformed(evt);
+                bt_voltarCadUserActionPerformed(evt);
+            }
+        });
+
+        lbl_cadUserResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
+
+        lbl_cadUserSenha.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserSenha.setText("Senha:");
+
+        txt_cadUserSenha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_cadUserSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_cadUserSenhaActionPerformed(evt);
             }
         });
 
@@ -177,72 +190,84 @@ public class telaCadUser extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(bt_cadUser))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl_cadNome, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_cadEmail)
-                                    .addComponent(lbl_cadIdade))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txt_cadNome)
-                                    .addComponent(txt_cadIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_cadEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(lbl_tituloCadUser)))
-                    .addComponent(bt_voltarGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                            .addComponent(lbl_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_cadUserEmail))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lbl_tituloCadUser)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbl_cadUserSenha)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(155, 155, 155))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(106, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(bt_cadUser)
+                        .addGap(223, 223, 223))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(24, 24, 24)
                 .addComponent(lbl_tituloCadUser)
-                .addGap(42, 42, 42)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_cadNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_cadNome))
-                .addGap(26, 26, 26)
+                    .addComponent(lbl_cadUserNome)
+                    .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cadEmail)
-                    .addComponent(txt_cadEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(lbl_cadUserEmail)
+                    .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_cadIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_cadIdade))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                    .addComponent(lbl_cadUserSenha)
+                    .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
                 .addComponent(bt_cadUser)
-                .addGap(20, 20, 20)
-                .addComponent(bt_voltarGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_cadNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadNomeActionPerformed
+    private void txt_cadUserNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadUserNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cadNomeActionPerformed
+    }//GEN-LAST:event_txt_cadUserNomeActionPerformed
 
-    private void txt_cadIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadIdadeActionPerformed
+    private void txt_cadUserEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadUserEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cadIdadeActionPerformed
-
-    private void txt_cadEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cadEmailActionPerformed
+    }//GEN-LAST:event_txt_cadUserEmailActionPerformed
 
     private void bt_cadUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cadUserActionPerformed
        ccu.cadastrarUsuario();
     }//GEN-LAST:event_bt_cadUserActionPerformed
 
-    private void bt_voltarGenArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarGenArtActionPerformed
+    private void bt_voltarCadUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarCadUserActionPerformed
         ccu.voltaMenu();
-    }//GEN-LAST:event_bt_voltarGenArtActionPerformed
+    }//GEN-LAST:event_bt_voltarCadUserActionPerformed
+
+    private void txt_cadUserSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadUserSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_cadUserSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,14 +308,14 @@ public class telaCadUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_cadUser;
-    private javax.swing.JButton bt_voltarGenArt;
+    private javax.swing.JButton bt_voltarCadUser;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel lbl_cadEmail;
-    private javax.swing.JLabel lbl_cadIdade;
-    private javax.swing.JLabel lbl_cadNome;
-    private javax.swing.JLabel lbl_tituloCadUser;
-    private javax.swing.JTextField txt_cadEmail;
-    private javax.swing.JTextField txt_cadIdade;
-    private javax.swing.JTextField txt_cadNome;
+    private javax.swing.JLabel lbl_cadUserEmail;
+    private javax.swing.JLabel lbl_cadUserNome;
+    private javax.swing.JLabel lbl_cadUserResult;
+    private javax.swing.JLabel lbl_cadUserSenha;
+    private javax.swing.JTextField txt_cadUserEmail;
+    private javax.swing.JTextField txt_cadUserNome;
+    private javax.swing.JTextField txt_cadUserSenha;
     // End of variables declaration//GEN-END:variables
 }

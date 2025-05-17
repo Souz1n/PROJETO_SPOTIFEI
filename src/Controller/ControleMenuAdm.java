@@ -5,6 +5,7 @@ import View.telaCadExcMus;
 import View.telaMenuAdm;
 import View.telaLogCad;
 import View.telaGenArt;
+import View.telaConsUser;
 
 public class ControleMenuAdm {
     
@@ -31,6 +32,14 @@ public class ControleMenuAdm {
         tga.setVisible(true);
         view.dispose();//fecha o menu
     }
+
+    public void telaGonsUser(){
+        telaConsUser tcu = new telaConsUser();
+        tcu.setVisible(true);
+        view.dispose();//fecha o menu
+    }
+    
+    
     
 
     

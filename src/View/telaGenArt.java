@@ -18,6 +18,24 @@ public class telaGenArt extends javax.swing.JFrame {
         cga = new ControleGenArt(this);
     }
 
+    public JLabel getLbl_emailArt() {
+        return lbl_emailArt;
+    }
+
+    public void setLbl_emailArt(JLabel lbl_emailArt) {
+        this.lbl_emailArt = lbl_emailArt;
+    }
+
+    public JTextField getTxt_cadEmailArtGenArt() {
+        return txt_cadEmailArtGenArt;
+    }
+
+    public void setTxt_cadEmailArtGenArt(JTextField txt_cadEmailArtGenArt) {
+        this.txt_cadEmailArtGenArt = txt_cadEmailArtGenArt;
+    }
+
+    
+    
     public JButton getBt_cadArt() {
         return bt_cadArtGenArt;
     }
@@ -105,6 +123,8 @@ public class telaGenArt extends javax.swing.JFrame {
         txt_cadBandaArtGenArt = new javax.swing.JTextField();
         bt_cadArtGenArt = new javax.swing.JButton();
         lbl_cadArtResult = new javax.swing.JLabel();
+        lbl_emailArt = new javax.swing.JLabel();
+        txt_cadEmailArtGenArt = new javax.swing.JTextField();
         bt_voltarGenArt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -147,49 +167,69 @@ public class telaGenArt extends javax.swing.JFrame {
 
         lbl_cadArtResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
 
+        lbl_emailArt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_emailArt.setText("Email");
+
+        txt_cadEmailArtGenArt.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_cadEmailArtGenArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_cadEmailArtGenArtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jf_cadArtLayout = new javax.swing.GroupLayout(jf_cadArt);
         jf_cadArt.setLayout(jf_cadArtLayout);
         jf_cadArtLayout.setHorizontalGroup(
             jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_cadArtLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_cadArtLayout.createSequentialGroup()
-                        .addComponent(lbl_casArtTitleGenArt)
-                        .addGap(103, 103, 103))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_cadArtLayout.createSequentialGroup()
-                        .addComponent(bt_cadArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(132, 132, 132))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_casArtTitleGenArt)
+                .addGap(103, 103, 103))
             .addGroup(jf_cadArtLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_bandaArt)
-                    .addComponent(lbl_nomeArt))
-                .addGap(18, 18, 18)
-                .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_cadNomeArtGenArt, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-                    .addComponent(txt_cadBandaArtGenArt, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-                    .addComponent(lbl_cadArtResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jf_cadArtLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(bt_cadArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(131, 131, 131))
+                    .addGroup(jf_cadArtLayout.createSequentialGroup()
+                        .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_bandaArt)
+                            .addComponent(lbl_nomeArt)
+                            .addComponent(lbl_emailArt, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_cadNomeArtGenArt, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(txt_cadBandaArtGenArt, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(lbl_cadArtResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_cadEmailArtGenArt))
+                        .addContainerGap(80, Short.MAX_VALUE))))
         );
         jf_cadArtLayout.setVerticalGroup(
             jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jf_cadArtLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(lbl_casArtTitleGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_nomeArt)
-                    .addComponent(txt_cadNomeArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_bandaArt)
-                    .addComponent(txt_cadBandaArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jf_cadArtLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_nomeArt)
+                            .addComponent(txt_cadNomeArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addGroup(jf_cadArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_bandaArt)
+                            .addComponent(txt_cadBandaArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addComponent(txt_cadEmailArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jf_cadArtLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_emailArt)))
+                .addGap(18, 18, 18)
                 .addComponent(bt_cadArtGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(lbl_cadArtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         bt_voltarGenArt.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
@@ -209,22 +249,24 @@ public class telaGenArt extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(225, 225, 225)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jf_cadArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_tituloLogin)))
+                        .addComponent(lbl_tituloLogin))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(bt_voltarGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(251, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jf_cadArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(236, 236, 236))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jf_cadArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addComponent(bt_voltarGenArt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -247,6 +289,10 @@ public class telaGenArt extends javax.swing.JFrame {
     private void bt_voltarGenArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarGenArtActionPerformed
         cga.voltaMenu();
     }//GEN-LAST:event_bt_voltarGenArtActionPerformed
+
+    private void txt_cadEmailArtGenArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cadEmailArtGenArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_cadEmailArtGenArtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,9 +339,11 @@ public class telaGenArt extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_bandaArt;
     private javax.swing.JLabel lbl_cadArtResult;
     private javax.swing.JLabel lbl_casArtTitleGenArt;
+    private javax.swing.JLabel lbl_emailArt;
     private javax.swing.JLabel lbl_nomeArt;
     private javax.swing.JLabel lbl_tituloLogin;
     private javax.swing.JTextField txt_cadBandaArtGenArt;
+    private javax.swing.JTextField txt_cadEmailArtGenArt;
     private javax.swing.JTextField txt_cadNomeArtGenArt;
     // End of variables declaration//GEN-END:variables
 }
