@@ -57,6 +57,11 @@ public class telaMenuAdm extends javax.swing.JFrame {
         bt_verEstatMenuAdm.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_verEstatMenuAdm.setText("Estatísticas");
         bt_verEstatMenuAdm.setActionCommand("");
+        bt_verEstatMenuAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_verEstatMenuAdmActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 102));
         jLabel1.setForeground(new java.awt.Color(204, 0, 153));
@@ -136,6 +141,10 @@ public class telaMenuAdm extends javax.swing.JFrame {
     private void bt_consUserMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consUserMenuAdmActionPerformed
         cma.telaGonsUser();
     }//GEN-LAST:event_bt_consUserMenuAdmActionPerformed
+
+    private void bt_verEstatMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_verEstatMenuAdmActionPerformed
+        cma.telaEstaticMus();
+    }//GEN-LAST:event_bt_verEstatMenuAdmActionPerformed
 
 //    public static void main(String args[]) {;
 //        /* Set the Nimbus look and feel */

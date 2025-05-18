@@ -35,9 +35,10 @@ public class ControleMenuAdm {
         tcu.setVisible(true);
         view.dispose();//fecha o menu
     }
-    
-    
-    
-
+    public void telaEstaticMus() {
+    View.telaEstaticMus tela = new View.telaEstaticMus();
+    tela.setVisible(true);
+    view.dispose(); // se você quiser fechar a tela atual
+}
     
 }

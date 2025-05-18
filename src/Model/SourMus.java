@@ -50,8 +50,4 @@ public class SourMus {
     public void setAno(int ano) {
         this.ano = ano;
     }
-    
-    
-    
-    
 }
