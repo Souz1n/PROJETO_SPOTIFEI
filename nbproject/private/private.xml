@@ -8,7 +8,7 @@
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleGenMus.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/ConsMus.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/ExcMus.java</file>
-            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/LogUserAdm.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/Login.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ExcMuscDAO.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ConsMuscDAO.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/Conexao.java</file>
@@ -30,6 +30,14 @@
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/ConsUser.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ConsUserDAO.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleConsUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaMenuUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Model/SourMus.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleMenuUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/LoginUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/MenuUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Imagens/img_adm.png</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Imagens/img_source.png</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/SourceArtPorIdDAO.java</file>
         </group>
     </open-files>
 </project-private>

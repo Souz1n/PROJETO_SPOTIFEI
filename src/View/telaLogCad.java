@@ -181,9 +181,9 @@ public class telaLogCad extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bt_loginADM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(27, 27, 27)
                         .addComponent(bt_loginUsuario)
-                        .addGap(32, 32, 32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bt_cadastrar)
                         .addGap(41, 41, 41))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -231,7 +231,7 @@ public class telaLogCad extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_loginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginUsuarioActionPerformed
-        // TODO add your handling code here:
+        cl.fazerLoginUser();
     }//GEN-LAST:event_bt_loginUsuarioActionPerformed
 
     private void txt_nomeLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomeLoginActionPerformed
@@ -239,7 +239,7 @@ public class telaLogCad extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_nomeLoginActionPerformed
 
     private void bt_loginADMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginADMActionPerformed
-      cl.fazerLoginAdm();
+        cl.fazerLoginAdm();
     }//GEN-LAST:event_bt_loginADMActionPerformed
 
     private void txt_textoAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_textoAvisoActionPerformed

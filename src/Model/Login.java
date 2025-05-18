@@ -1,12 +1,18 @@
 
 package Model;
 
-public class LogUserAdm {
+public class Login {
     
     String nome, senha;
 
-    public LogUserAdm() {
+    public Login() {
     }
+
+    public Login(String nome) {
+        this.nome = nome;
+    }
+    
+    
 
     public String getNome() {
         return nome;

@@ -14,7 +14,7 @@ public class ConsMuscDAO {
     }
 
     public int consultarIdMusica(String nome, String artista) {
-        String sql = "SELECT id_musica FROM musica WHERE nome = ? AND artista ="
+        String sql = "SELECT id_musica FROM musica WHERE nome_musica = ? AND artista ="
                 + " ?";
         
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {

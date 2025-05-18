@@ -1,14 +1,9 @@
 package Controller;
 
-import DAO.CadMuscDAO;
-import DAO.ExcMuscDAO;
-import DAO.ConsMuscDAO;
-import DAO.Conexao;
+import DAO.*;
 import java.sql.Connection;
 import java.sql.SQLException;
-import Model.CadMus;
-import Model.ExcMus;
-import Model.ConsMus;
+import Model.*;
 import View.telaCadExcMus;
 import View.telaMenuAdm;
 
@@ -19,28 +14,30 @@ public class ControleGenMus {
     public ControleGenMus(telaCadExcMus view){
         this.view = view;
     }
-    public void cadastrarMusica() {
-        String nome = view.getTxt_cadMusNam().getText();
-        String artista = view.getTxt_cadMusArt().getText();
-        int ano = Integer.parseInt(view.getTxt_cadMusAno().getText());
+    
+public void cadastrarMusica() {
+    String nome = view.getTxt_cadMusNam().getText();
+    String genero = view.getTxt_cadMusGener().getText();
+    int ano = Integer.parseInt(view.getTxt_cadMusAno().getText());
+    String nomeArtista = view.getTxt_cadMusArt().getText();
 
-        CadMus musica = new CadMus();
-        musica.setNome(nome);
-        musica.setArtista(artista);
-        musica.setAno(ano);
-
-        try {
-            Connection conn = new Conexao().getConnection();
-            CadMuscDAO dao = new CadMuscDAO(conn);
-            dao.inserir(musica);
-            view.getLbl_cadMusResult().setText("Música cadastrada com "
-                    + "sucesso!");
-        } 
-        catch (SQLException e) {
-            view.getLbl_cadMusResult().setText("Erro ao cadastrar música: " + 
-                    e.getMessage());
+    try (Connection conn = new Conexao().getConnection()) {
+        SourceArtPorIdDAO artistaDAO = new SourceArtPorIdDAO(conn);
+        int idArtista = artistaDAO.buscarIdArtistaPorNome(nomeArtista);
+        if (idArtista == -1) {
+            view.getLbl_cadMusResult().setText("Artista não encontrado!");
+            return;
         }
+
+        CadMus musica = new CadMus(nome, genero, ano, idArtista);
+        CadMuscDAO musicaDAO = new CadMuscDAO(conn);
+        musicaDAO.inserir(musica);
+
+        view.getLbl_cadMusResult().setText("Música cadastrada com sucesso!");
+    } catch (SQLException e) {
+        view.getLbl_cadMusResult().setText("Erro: " + e.getMessage());
     }
+}
     
     public void removerMusica(){
     int id_musica = Integer.parseInt(view.getTxt_excMusIdMus().

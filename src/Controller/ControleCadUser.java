@@ -3,8 +3,7 @@ package Controller;
 import DAO.CadUserDAO;
 import DAO.Conexao;
 import Model.CadUser;
-import View.telaCadUser;
-import View.telaMenuAdm;
+import View.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -47,8 +46,8 @@ public class ControleCadUser {
     }
     
      public void voltaMenu(){
-        telaMenuAdm tma = new telaMenuAdm();
-        tma.setVisible(true);
+        telaLogCad tlc = new telaLogCad();
+        tlc.setVisible(true);
         view.dispose();
     }
      

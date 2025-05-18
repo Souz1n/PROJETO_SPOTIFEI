@@ -1,11 +1,8 @@
 
 package Controller;
 
-import View.telaCadExcMus;   
-import View.telaMenuAdm;
-import View.telaLogCad;
-import View.telaGenArt;
-import View.telaConsUser;
+import View.*;   
+
 
 public class ControleMenuAdm {
     

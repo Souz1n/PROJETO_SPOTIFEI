@@ -13,14 +13,15 @@ public class CadMuscDAO {
     }
 
     public void inserir(CadMus cadMus) throws SQLException {
-        String sql = "INSERT INTO musica (nome, ano, artista) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO musica (nome_musica, ano, genero, id_artista) "
+                + "VALUES (?, ?, ?, ?)";
         
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, cadMus.getNome());
             statement.setInt(2, cadMus.getAno());
-            statement.setString(3, cadMus.getArtista());
-            statement.execute();
-
+            statement.setString(3, cadMus.getGenero());
+            statement.setInt(4, cadMus.getId_artista());
+            statement.executeUpdate();
         }
     }
 }

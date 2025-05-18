@@ -1,18 +1,38 @@
 package Model;
 
 public class CadMus {
-    private int id;
-    private String nome, Artista;
-    private int ano;
+    private String nome, artista, genero;
+    private int id, ano, id_artista;
+
 
     public CadMus() {
     }
 
-    public CadMus(int id, String nome, String Artista, int ano) {
+    public CadMus(String nome, String genero, int ano, int id_artista) {
+        this.nome = nome;
+        this.genero = genero;
+        this.ano = ano;
+        this.id_artista = id_artista;
+    }
+
+    
+    
+    public CadMus(int id, String nome, String artista, int ano, String genero, 
+                  int id_artista) {
         this.id = id;
         this.nome = nome;
-        this.Artista = Artista;
+        this.artista = artista;
+        this.genero = genero;
         this.ano = ano;
+        this.id_artista = id_artista;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public int getId() {
@@ -32,11 +52,11 @@ public class CadMus {
     }
 
     public String getArtista() {
-        return Artista;
+        return artista;
     }
 
     public void setArtista(String Artista) {
-        this.Artista = Artista;
+        this.artista = Artista;
     }
 
     public int getAno() {
@@ -46,4 +66,13 @@ public class CadMus {
     public void setAno(int ano) {
         this.ano = ano;
     }  
+
+    public int getId_artista() {
+        return id_artista;
+    }
+
+    public void setId_artista(int id_artista) {
+        this.id_artista = id_artista;
+    }
+    
 }
