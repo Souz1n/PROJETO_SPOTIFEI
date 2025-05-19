@@ -69,6 +69,5 @@ public class ControleLogin{
         } catch (SQLException e) {
             view.getTxt_textoAviso().setText("Erro no banco de dados: " + e.getMessage());
         }
-        view.dispose();
     } 
 }

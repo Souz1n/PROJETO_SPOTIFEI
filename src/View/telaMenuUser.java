@@ -31,6 +31,14 @@ public class telaMenuUser extends javax.swing.JFrame {
     public void setLbl_sourcNomeMusRes(JLabel lbl_sourcNomeMusRes) {
         this.lbl_sourcNomeMusRes = lbl_sourcNomeMusRes;
     }
+
+    public JLabel getLbl_sourMusStatusBarra() {
+        return lbl_sourMusStatusBarra;
+    }
+
+    public void setLbl_sourMusStatusBarra(JLabel lbl_sourMusStatusBarra) {
+        this.lbl_sourMusStatusBarra = lbl_sourMusStatusBarra;
+    }
     
     
 
@@ -98,30 +106,46 @@ public class telaMenuUser extends javax.swing.JFrame {
         this.txt_barraPesquisaMus = txt_barraPesquisaMus;
     }
 
-    public JTextField getTxt_sourMusAno() {
-        return txt_sourMusAno;
+    public JButton getBt_fechaSource() {
+        return bt_fechaSource;
     }
 
-    public void setTxt_sourMusAno(JTextField txt_sourMusAno) {
-        this.txt_sourMusAno = txt_sourMusAno;
+    public void setBt_fechaSource(JButton bt_fechaSource) {
+        this.bt_fechaSource = bt_fechaSource;
     }
 
-    public JTextField getTxt_sourMusArt() {
-        return txt_sourMusArt;
+    public JButton getBt_voltarLog() {
+        return bt_voltarLog;
     }
 
-    public void setTxt_sourMusArt(JTextField txt_sourMusArt) {
-        this.txt_sourMusArt = txt_sourMusArt;
+    public void setBt_voltarLog(JButton bt_voltarLog) {
+        this.bt_voltarLog = bt_voltarLog;
     }
 
-    public JTextField getTxt_sourMusGener() {
-        return txt_sourMusGener;
+    public JLabel getLbl_sourceMusAnoRes() {
+        return lbl_sourceMusAnoRes;
     }
 
-    public void setTxt_sourMusGener(JTextField txt_sourMusGener) {
-        this.txt_sourMusGener = txt_sourMusGener;
+    public void setLbl_sourceMusAnoRes(JLabel lbl_sourceMusAno) {
+        this.lbl_sourceMusAnoRes = lbl_sourceMusAno;
     }
-    
+
+    public JLabel getLbl_sourceMusArtRes() {
+        return lbl_sourceMusArtRes;
+    }
+
+    public void setLbl_sourceMusArtRes(JLabel lbl_sourceMusArt) {
+        this.lbl_sourceMusArtRes = lbl_sourceMusArt;
+    }
+
+    public JLabel getLbl_sourceMusGenRes() {
+        return lbl_sourceMusGenRes;
+    }
+
+    public void setLbl_sourceMusGenRes(JLabel lbl_sourceMusGen) {
+        this.lbl_sourceMusGenRes = lbl_sourceMusGen;
+    }
+
     
 
     /**
@@ -137,19 +161,23 @@ public class telaMenuUser extends javax.swing.JFrame {
         bt_souceMus = new javax.swing.JButton();
         pn_infoMus = new javax.swing.JPanel();
         lbl_sourMusArt = new javax.swing.JLabel();
-        txt_sourMusArt = new javax.swing.JTextField();
         lbl_sourcNomeMusRes = new javax.swing.JLabel();
         lbl_sourMusYear = new javax.swing.JLabel();
-        txt_sourMusAno = new javax.swing.JTextField();
         lbl_sourMusGener = new javax.swing.JLabel();
-        txt_sourMusGener = new javax.swing.JTextField();
         lbl_sourMusStatus = new javax.swing.JLabel();
         bt_fechaSource = new javax.swing.JButton();
+        lbl_sourceMusArtRes = new javax.swing.JLabel();
+        lbl_sourceMusAnoRes = new javax.swing.JLabel();
+        lbl_sourceMusGenRes = new javax.swing.JLabel();
+        bt_sourcCurtir = new javax.swing.JButton();
+        bt_sourcDescurtir = new javax.swing.JButton();
         bt_voltarLog = new javax.swing.JButton();
+        lbl_sourMusStatusBarra = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txt_barraPesquisaMus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_barraPesquisaMus.setText(" ");
         txt_barraPesquisaMus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_barraPesquisaMusActionPerformed(evt);
@@ -163,37 +191,18 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
-        lbl_sourMusArt.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
-        lbl_sourMusArt.setText("Artista");
+        pn_infoMus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        txt_sourMusArt.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_sourMusArt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_sourMusArtActionPerformed(evt);
-            }
-        });
+        lbl_sourMusArt.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
+        lbl_sourMusArt.setText("Artista:");
 
         lbl_sourcNomeMusRes.setFont(new java.awt.Font("Swis721 Cn BT", 1, 18)); // NOI18N
 
         lbl_sourMusYear.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
-        lbl_sourMusYear.setText("Ano");
-
-        txt_sourMusAno.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_sourMusAno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_sourMusAnoActionPerformed(evt);
-            }
-        });
+        lbl_sourMusYear.setText("Ano:");
 
         lbl_sourMusGener.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
-        lbl_sourMusGener.setText("Genero");
-
-        txt_sourMusGener.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_sourMusGener.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_sourMusGenerActionPerformed(evt);
-            }
-        });
+        lbl_sourMusGener.setText("Genero:");
 
         lbl_sourMusStatus.setFont(new java.awt.Font("Swis721 Cn BT", 0, 12)); // NOI18N
 
@@ -205,59 +214,95 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
+        lbl_sourceMusArtRes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        lbl_sourceMusAnoRes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        lbl_sourceMusGenRes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        bt_sourcCurtir.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_sourcCurtir.setText("Like");
+        bt_sourcCurtir.setActionCommand("");
+        bt_sourcCurtir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_sourcCurtirActionPerformed(evt);
+            }
+        });
+
+        bt_sourcDescurtir.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_sourcDescurtir.setText("Deslike");
+        bt_sourcDescurtir.setActionCommand("");
+        bt_sourcDescurtir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_sourcDescurtirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pn_infoMusLayout = new javax.swing.GroupLayout(pn_infoMus);
         pn_infoMus.setLayout(pn_infoMusLayout);
         pn_infoMusLayout.setHorizontalGroup(
             pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_infoMusLayout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_sourMusArt)
-                    .addComponent(lbl_sourMusYear)
-                    .addComponent(lbl_sourMusGener))
-                .addGap(18, 18, 18)
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_sourMusGener)
-                    .addComponent(txt_sourMusAno)
-                    .addComponent(txt_sourMusArt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(94, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_infoMusLayout.createSequentialGroup()
+                        .addContainerGap(83, Short.MAX_VALUE)
+                        .addComponent(lbl_sourcNomeMusRes, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7))
+                    .addGroup(pn_infoMusLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
+                                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_sourMusArt)
+                                    .addComponent(lbl_sourMusYear))
+                                .addGap(54, 54, 54))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
+                                .addComponent(lbl_sourMusGener)
+                                .addGap(46, 46, 46)))
+                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_sourceMusGenRes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lbl_sourceMusArtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_sourceMusAnoRes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_infoMusLayout.createSequentialGroup()
+                        .addComponent(bt_sourcDescurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
-                        .addComponent(lbl_sourcNomeMusRes, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(bt_fechaSource, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
-                        .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(146, 146, 146))))
+                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(bt_fechaSource, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bt_sourcCurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(11, 11, 11))))
         );
         pn_infoMusLayout.setVerticalGroup(
             pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_infoMusLayout.createSequentialGroup()
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(12, 12, 12)
+                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bt_fechaSource, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_sourcNomeMusRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pn_infoMusLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(lbl_sourcNomeMusRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pn_infoMusLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(bt_fechaSource, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_sourMusArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_sourMusArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_sourMusAno, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_sourMusYear, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_sourMusGener, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_sourMusGener, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_sourceMusArtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_sourMusArt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_sourcCurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_sourceMusAnoRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_sourMusYear, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(bt_sourcDescurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_sourMusGener, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_sourceMusGenRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         bt_voltarLog.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
@@ -268,6 +313,8 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
+        lbl_sourMusStatusBarra.setFont(new java.awt.Font("Swis721 Cn BT", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -275,29 +322,37 @@ public class telaMenuUser extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pn_infoMus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_barraPesquisaMus))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(141, 141, 141)
+                        .addComponent(txt_barraPesquisaMus, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
                         .addComponent(bt_souceMus))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(bt_voltarLog)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                        .addComponent(bt_voltarLog)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(234, 234, 234)
+                                .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bt_souceMus, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(txt_barraPesquisaMus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pn_infoMus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addComponent(bt_souceMus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_barraPesquisaMus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
@@ -308,20 +363,8 @@ public class telaMenuUser extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_barraPesquisaMusActionPerformed
 
     private void bt_souceMusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_souceMusActionPerformed
-        cmu.pesquisarMusica();
+        cmu.consultarMusica();
     }//GEN-LAST:event_bt_souceMusActionPerformed
-
-    private void txt_sourMusArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sourMusArtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_sourMusArtActionPerformed
-
-    private void txt_sourMusAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sourMusAnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_sourMusAnoActionPerformed
-
-    private void txt_sourMusGenerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sourMusGenerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_sourMusGenerActionPerformed
 
     private void bt_fechaSourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_fechaSourceActionPerformed
         cmu.sairSource();
@@ -330,6 +373,14 @@ public class telaMenuUser extends javax.swing.JFrame {
     private void bt_voltarLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarLogActionPerformed
         cmu.voltarLog();
     }//GEN-LAST:event_bt_voltarLogActionPerformed
+
+    private void bt_sourcDescurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcDescurtirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_sourcDescurtirActionPerformed
+
+    private void bt_sourcCurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcCurtirActionPerformed
+
+    }//GEN-LAST:event_bt_sourcCurtirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,16 +420,19 @@ public class telaMenuUser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_fechaSource;
     private javax.swing.JButton bt_souceMus;
+    private javax.swing.JButton bt_sourcCurtir;
+    private javax.swing.JButton bt_sourcDescurtir;
     private javax.swing.JButton bt_voltarLog;
     private javax.swing.JLabel lbl_sourMusArt;
     private javax.swing.JLabel lbl_sourMusGener;
     private javax.swing.JLabel lbl_sourMusStatus;
+    private javax.swing.JLabel lbl_sourMusStatusBarra;
     private javax.swing.JLabel lbl_sourMusYear;
     private javax.swing.JLabel lbl_sourcNomeMusRes;
+    private javax.swing.JLabel lbl_sourceMusAnoRes;
+    private javax.swing.JLabel lbl_sourceMusArtRes;
+    private javax.swing.JLabel lbl_sourceMusGenRes;
     private javax.swing.JPanel pn_infoMus;
     private javax.swing.JTextField txt_barraPesquisaMus;
-    private javax.swing.JTextField txt_sourMusAno;
-    private javax.swing.JTextField txt_sourMusArt;
-    private javax.swing.JTextField txt_sourMusGener;
     // End of variables declaration//GEN-END:variables
 }

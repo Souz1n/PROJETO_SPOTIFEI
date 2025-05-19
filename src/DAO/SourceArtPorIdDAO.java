@@ -15,18 +15,18 @@ public class SourceArtPorIdDAO {
     }
     
     public int buscarIdArtistaPorNome(String nomeArtista) throws SQLException {
-    String sql = "SELECT a.id\n" +
-                 "FROM artista a\n" +
-                 "JOIN pessoa p ON a.id_pessoa = p.id\n" +
-                 "WHERE p.nome = ?";
-    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-        stmt.setString(1, nomeArtista);
-        ResultSet rs = stmt.executeQuery();
-        if (rs.next()) {
-            return rs.getInt("id");
-        } else {
-            return -1;
+        String sql = "SELECT a.id\n" +
+                     "FROM artista a\n" +
+                     "JOIN pessoa p ON a.id_pessoa = p.id\n" +
+                     "WHERE p.nome = ?";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nomeArtista);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("id");
+            } else {
+                return -1;
+            }
         }
     }
-}
 }

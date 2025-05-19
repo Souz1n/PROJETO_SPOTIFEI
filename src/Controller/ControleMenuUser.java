@@ -1,10 +1,10 @@
 package Controller;
 
 import DAO.Conexao;
+import DAO.SourceMusDAO;
+import Model.SourMus;
 import View.telaMenuUser;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ControleMenuUser {
@@ -15,34 +15,28 @@ public class ControleMenuUser {
         this.view = view;
     }
 
-    public void pesquisarMusica() {
-        String nomeMusica = view.getTxt_barraPesquisaMus().getText();
+    public void consultarMusica() {  
+        String nomeMusica = view.getTxt_barraPesquisaMus().getText().trim();
 
-        if (nomeMusica.isEmpty()) {
-            view.getLbl_sourMusStatus().setText("Digite o nome da música.");
-            return;
-        }
+        try {
+            Connection conn = new Conexao().getConnection();
+            SourceMusDAO dao = new SourceMusDAO(conn);
+            SourMus musica = dao.consultarMus(nomeMusica);
 
-        try (Connection conn = new Conexao().getConnection()) {
-            String sql = "SELECT artista, ano, genero FROM musica WHERE nome_musica = ?";
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, nomeMusica);
-
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                view.getTxt_sourMusArt().setText(rs.getString("artista"));
-                view.getTxt_sourMusAno().setText(String.valueOf(rs.getInt("ano")));
-                view.getTxt_sourMusGener().setText(rs.getString("genero"));
-                view.getLbl_sourMusStatus().setText("Música encontrada!");
-                view.getPn_infoMus().setVisible(true);
+            if (musica != null && musica.getNome_musica() != null) {
+                view.getPn_infoMus().setVisible(true);            
+                view.getLbl_sourcNomeMusRes().setText(nomeMusica);
+                view.getLbl_sourceMusAnoRes().setText(String.valueOf(musica.getAno()));
+                view.getLbl_sourceMusGenRes().setText(musica.getGenero());
+                view.getLbl_sourceMusArtRes().setText(musica.getArtista());
+                view.getLbl_sourMusStatusBarra().setText(""); 
+                view.getLbl_sourMusStatus().setText("");
             } else {
-                view.getLbl_sourMusStatus().setText("Música não encontrada.");
-                view.getPn_infoMus().setVisible(false);
+                view.getLbl_sourMusStatusBarra().setText("Música não encontrada.");
             }
 
         } catch (SQLException e) {
-            view.getLbl_sourMusStatus().setText("Erro ao buscar: " + e.getMessage());
+            view.getLbl_sourMusStatusBarra().setText("Erro ao consultar: " + e.getMessage());
         }
     }
 
@@ -52,6 +46,6 @@ public class ControleMenuUser {
 
     public void voltarLog() {
         view.dispose();
-        new View.telaLogCad().setVisible(true);
+        new View.telaMenuUser().setVisible(true);
     }
 }
