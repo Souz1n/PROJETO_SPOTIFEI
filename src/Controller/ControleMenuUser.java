@@ -1,7 +1,9 @@
 package Controller;
 
 import DAO.Conexao;
+import DAO.CurtidaDAO;
 import DAO.SourceMusDAO;
+import Model.SessaoUsuario;
 import Model.SourMus;
 import View.telaMenuUser;
 import java.sql.Connection;
@@ -39,6 +41,29 @@ public class ControleMenuUser {
             view.getLbl_sourMusStatusBarra().setText("Erro ao consultar: " + e.getMessage());
         }
     }
+public void curtirMusica(String nomeMusica) {
+    try {
+        Connection conn = new Conexao().getConnection();
+        CurtidaDAO dao = new CurtidaDAO(conn);
+        dao.registrarCurtida(SessaoUsuario.nomeUsuario, nomeMusica, true);
+        conn.close();
+    } catch (SQLException e) {
+        System.out.println("Erro ao curtir música: " + e.getMessage());
+    }
+}
+
+public void descurtirMusica(String nomeMusica) {
+    try {
+        Connection conn = new Conexao().getConnection();
+        CurtidaDAO dao = new CurtidaDAO(conn);
+        dao.registrarCurtida(SessaoUsuario.nomeUsuario, nomeMusica, false);
+        conn.close();
+    } catch (SQLException e) {
+        System.out.println("Erro ao descurtir música: " + e.getMessage());
+    }
+}
+
+
 
     public void sairSource() {
         view.getPn_infoMus().setVisible(false);

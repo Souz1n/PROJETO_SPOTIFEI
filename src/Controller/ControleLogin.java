@@ -6,6 +6,7 @@ import View.*;
 import DAO.LoginUserDAO;
 import DAO.Conexao;
 import Model.Login;
+import Model.SessaoUsuario;
 
 
 
@@ -57,11 +58,13 @@ public class ControleLogin{
             boolean autenticado = dao.verificarUsuario(usuario, senha);
 
             if (autenticado) {
+                SessaoUsuario.nomeUsuario = usuario;
                 view.getTxt_textoAviso().setText("Login realizado com sucesso!");           
                 telaMenuUser tmu = new telaMenuUser();
                 tmu.setVisible(true);
-
-            } else {
+                view.dispose();
+            }
+             else {
                 view.getTxt_textoAviso().setText("Usuário ou senha inválidos.");
             }
 

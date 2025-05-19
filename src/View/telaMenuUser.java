@@ -146,6 +146,7 @@ public class telaMenuUser extends javax.swing.JFrame {
         this.lbl_sourceMusGenRes = lbl_sourceMusGen;
     }
 
+
     
 
     /**
@@ -171,6 +172,7 @@ public class telaMenuUser extends javax.swing.JFrame {
         lbl_sourceMusGenRes = new javax.swing.JLabel();
         bt_sourcCurtir = new javax.swing.JButton();
         bt_sourcDescurtir = new javax.swing.JButton();
+        bt_addplaylist = new javax.swing.JButton();
         bt_voltarLog = new javax.swing.JButton();
         lbl_sourMusStatusBarra = new javax.swing.JLabel();
 
@@ -238,6 +240,13 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
+        bt_addplaylist.setText("Adicionar na playlist");
+        bt_addplaylist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_addplaylistActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pn_infoMusLayout = new javax.swing.GroupLayout(pn_infoMus);
         pn_infoMus.setLayout(pn_infoMusLayout);
         pn_infoMusLayout.setHorizontalGroup(
@@ -266,16 +275,18 @@ public class telaMenuUser extends javax.swing.JFrame {
                                 .addComponent(lbl_sourceMusAnoRes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bt_fechaSource, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_sourcCurtir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pn_infoMusLayout.createSequentialGroup()
-                        .addComponent(bt_sourcDescurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_infoMusLayout.createSequentialGroup()
-                        .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(bt_fechaSource, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bt_sourcCurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(11, 11, 11))))
+                        .addGap(59, 59, 59)
+                        .addComponent(bt_sourcDescurtir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+            .addGroup(pn_infoMusLayout.createSequentialGroup()
+                .addGap(181, 181, 181)
+                .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_addplaylist)
+                .addGap(41, 41, 41))
         );
         pn_infoMusLayout.setVerticalGroup(
             pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,9 +311,11 @@ public class telaMenuUser extends javax.swing.JFrame {
                 .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbl_sourMusGener, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_sourceMusGenRes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addGroup(pn_infoMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_sourMusStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_addplaylist))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         bt_voltarLog.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
@@ -336,7 +349,7 @@ public class telaMenuUser extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(234, 234, 234)
                                 .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,12 +388,16 @@ public class telaMenuUser extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_voltarLogActionPerformed
 
     private void bt_sourcDescurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcDescurtirActionPerformed
-        // TODO add your handling code here:
+        cmu.descurtirMusica(txt_barraPesquisaMus.getText());
     }//GEN-LAST:event_bt_sourcDescurtirActionPerformed
 
     private void bt_sourcCurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcCurtirActionPerformed
-
+        cmu.curtirMusica(txt_barraPesquisaMus.getText());
     }//GEN-LAST:event_bt_sourcCurtirActionPerformed
+
+    private void bt_addplaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addplaylistActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_addplaylistActionPerformed
 
     /**
      * @param args the command line arguments
@@ -417,7 +434,11 @@ public class telaMenuUser extends javax.swing.JFrame {
 //        });
 //    }
     private final ControleMenuUser cmu;
+    private javax.swing.JButton bt_likeMus;
+    private javax.swing.JButton bt_dislikeMus;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_addplaylist;
     private javax.swing.JButton bt_fechaSource;
     private javax.swing.JButton bt_souceMus;
     private javax.swing.JButton bt_sourcCurtir;
