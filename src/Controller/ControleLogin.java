@@ -58,7 +58,7 @@ public class ControleLogin{
             boolean autenticado = dao.verificarUsuario(usuario, senha);
 
             if (autenticado) {
-                SessaoUsuario.nomeUsuario = usuario;
+                SessaoUsuario.nome_user = usuario;
                 view.getTxt_textoAviso().setText("Login realizado com sucesso!");           
                 telaMenuUser tmu = new telaMenuUser();
                 tmu.setVisible(true);

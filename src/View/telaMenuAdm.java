@@ -2,6 +2,7 @@
 package View;
 
 import Controller.ControleMenuAdm;
+import Controller.ControleEstatisticas;
 
 public class telaMenuAdm extends javax.swing.JFrame {
 
@@ -143,7 +144,14 @@ public class telaMenuAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_consUserMenuAdmActionPerformed
 
     private void bt_verEstatMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_verEstatMenuAdmActionPerformed
-        cma.telaEstaticMus();
+        telaEstatisticas telaEst = new telaEstatisticas(); 
+        ControleEstatisticas ce = new ControleEstatisticas(telaEst); 
+        
+        ce.verTotalUser(); 
+        ce.verTotalMus(); 
+        ce.carregarTop5Musicas();
+        ce.carregarTop5MusicasMenos();
+        telaEst.setVisible(true); 
     }//GEN-LAST:event_bt_verEstatMenuAdmActionPerformed
 
 //    public static void main(String args[]) {;
@@ -179,7 +187,6 @@ public class telaMenuAdm extends javax.swing.JFrame {
 //    }
 
     private ControleMenuAdm cma;;
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_cadArtMenuAdm;
     private javax.swing.JButton bt_consUserMenuAdm;

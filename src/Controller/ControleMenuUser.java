@@ -41,27 +41,64 @@ public class ControleMenuUser {
             view.getLbl_sourMusStatusBarra().setText("Erro ao consultar: " + e.getMessage());
         }
     }
-public void curtirMusica(String nomeMusica) {
-    try {
-        Connection conn = new Conexao().getConnection();
-        CurtidaDAO dao = new CurtidaDAO(conn);
-        dao.registrarCurtida(SessaoUsuario.nomeUsuario, nomeMusica, true);
-        conn.close();
-    } catch (SQLException e) {
-        System.out.println("Erro ao curtir música: " + e.getMessage());
-    }
-}
+    public void curtirMusica(String nomeMusica) {
+        try {
+            Connection conn = new Conexao().getConnection();
+            CurtidaDAO dao = new CurtidaDAO(conn);
 
-public void descurtirMusica(String nomeMusica) {
-    try {
-        Connection conn = new Conexao().getConnection();
-        CurtidaDAO dao = new CurtidaDAO(conn);
-        dao.registrarCurtida(SessaoUsuario.nomeUsuario, nomeMusica, false);
-        conn.close();
-    } catch (SQLException e) {
-        System.out.println("Erro ao descurtir música: " + e.getMessage());
+            String nomeUsuario = SessaoUsuario.nome_user;
+            int idUsuario = dao.buscarIdUsuarioPorNome(nomeUsuario);
+            int idMusica = dao.buscarIdMusicaPorNome(nomeMusica.trim());
+
+            if (idMusica == -1 || idUsuario == -1) {
+                System.out.println("Música ou usuário não encontrado.");
+                return;
+            }
+
+            // Verifica se o usuário já curtiu
+            if (dao.usuarioJaCurtiu(idMusica, idUsuario)) {
+                view.getLbl_sourMusStatus().setText("Você já curtiu esta música!");
+            } else {
+                dao.registrarCurtida(idMusica, idUsuario, true);
+                view.getLbl_sourMusStatus().setText("Música curtida com sucesso!");
+            }
+
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao curtir música: " + e.getMessage());
+        }
     }
-}
+
+
+    public void descurtirMusica(String nomeMusica) {
+        try {
+            Connection conn = new Conexao().getConnection();
+            CurtidaDAO dao = new CurtidaDAO(conn);
+
+            String nomeUsuario = SessaoUsuario.nome_user;
+            int idUsuario = dao.buscarIdUsuarioPorNome(nomeUsuario);
+            int idMusica = dao.buscarIdMusicaPorNome(nomeMusica.trim());
+
+            if (idMusica == -1 || idUsuario == -1) {
+                System.out.println("Música ou usuário não encontrado.");
+                return;
+            }
+
+            // Verifica se o usuário já curtiu
+            if (dao.usuarioJaCurtiu(idMusica, idUsuario)) {
+                view.getLbl_sourMusStatus().setText("Você já descurtiu "
+                                                       + "esta música!");
+            } else {
+                dao.registrarCurtida(idMusica, idUsuario, true);
+                view.getLbl_sourMusStatus().setText("Música descurtida com "
+                                                       + "sucesso!");
+            }
+
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao descurtir música: " + e.getMessage());
+        }
+    }
 
 
 
@@ -71,6 +108,6 @@ public void descurtirMusica(String nomeMusica) {
 
     public void voltarLog() {
         view.dispose();
-        new View.telaMenuUser().setVisible(true);
+        new View.telaLogCad().setVisible(true);
     }
 }
