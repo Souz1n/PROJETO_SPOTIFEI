@@ -11,12 +11,10 @@ public class PlaylistDAO {
         this.conn = conn;
     }
 
-    public void criarPlaylist(String nomePlaylist, int idUsuario) throws SQLException {
-        String sql = "INSERT INTO playlist (nome_playlist, id_usuario) VALUES (?, ?)";
+    public void criarPlaylist(String nome) throws SQLException {
+        String sql = "INSERT INTO playlist (nome) VALUES (?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, nomePlaylist);
-            stmt.setInt(2, idUsuario);
-            stmt.executeUpdate();
+            stmt.setString(1, nome);
         }
     }
 

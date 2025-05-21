@@ -1,49 +1,42 @@
 package Model;
 
 public class Playlist {
-    private int id;
-    private int idUsuario;
-    private int idMusica;
-    private String nomePlaylist;
+    private int id_usuario;
+    private int id_musica;
+    private String nome;
 
     public Playlist() {}
 
     public Playlist(int idUsuario, int idMusica, String nomePlaylist) {
-        this.idUsuario = idUsuario;
-        this.idMusica = idMusica;
-        this.nomePlaylist = nomePlaylist;
+        this.id_usuario = id_usuario;
+        this.id_musica = id_musica;
+        this.nome = nome;
     }
 
-    public int getId() {
-        return id;
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public int getId_musica() {
+        return id_musica;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId_musica(int id_musica) {
+        this.id_musica = id_musica;
     }
 
-    public int getIdMusica() {
-        return idMusica;
+    public String getNome() {
+        return nome;
     }
 
-    public void setIdMusica(int idMusica) {
-        this.idMusica = idMusica;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getNomePlaylist() {
-        return nomePlaylist;
-    }
-
-    public void setNomePlaylist(String nomePlaylist) {
-        this.nomePlaylist = nomePlaylist;
-    }
+    
     
 }
