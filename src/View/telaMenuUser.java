@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Controller.ControleMenuUser;
+import View.telaPlaylistUser;
+import Controller.ControlePlaylistUser;
 
 /**
  *
@@ -400,7 +402,12 @@ public class telaMenuUser extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_sourcCurtirActionPerformed
 
     private void bt_genPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_genPlaylistActionPerformed
-        cmu.genenciarPlaylist();
+        cmu.gerenciarPlaylist();
+        telaPlaylistUser telaPlU = new telaPlaylistUser(); 
+        ControlePlaylistUser cpu = new ControlePlaylistUser(telaPlU); 
+        
+        cpu.carregarPlaylist();
+        telaPlU.setVisible(true); 
     }//GEN-LAST:event_bt_genPlaylistActionPerformed
 
     /**

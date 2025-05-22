@@ -5,8 +5,7 @@ import java.sql.SQLException;
 import View.*;
 import DAO.LoginUserDAO;
 import DAO.Conexao;
-import Model.Login;
-import Model.SessaoUsuario;
+import Model.*;
 
 
 
@@ -43,34 +42,32 @@ public class ControleLogin{
         view.dispose();
     }
     
-    public void fazerLoginUser() {
-        String usuario = view.getTxt_nomeLogin().getText();
-        String senha = view.getTxt_senhaLogin().getText();
-        
-        Login loginADM = new Login();
-        loginADM.setNome(usuario);
-        loginADM.setSenha(senha);
+public void fazerLoginUser() {
+    String usuario = view.getTxt_nomeLogin().getText();
+    String senha = view.getTxt_senhaLogin().getText();
 
-        try {
-            Connection conn = new Conexao().getConnection();
-            LoginUserDAO dao = new LoginUserDAO(conn);
+    try {
+        Connection conn = new Conexao().getConnection();
+        LoginUserDAO dao = new LoginUserDAO(conn);
 
-            boolean autenticado = dao.verificarUsuario(usuario, senha);
+        SessaoUsuario sessao = dao.verificarUsuario(usuario, senha);
 
-            if (autenticado) {
-                SessaoUsuario.nome_user = usuario;
-                view.getTxt_textoAviso().setText("Login realizado com sucesso!");           
-                telaMenuUser tmu = new telaMenuUser();
-                tmu.setVisible(true);
-                view.dispose();
-            }
-             else {
-                view.getTxt_textoAviso().setText("Usuário ou senha inválidos.");
-            }
+        if (sessao != null) {
+            // Armazenar na sessão (estático)
+            SessaoUsuario.id_usuario = sessao.getId_usuario();
+            SessaoUsuario.setNome_user(usuario);
 
-            conn.close();
-        } catch (SQLException e) {
-            view.getTxt_textoAviso().setText("Erro no banco de dados: " + e.getMessage());
+            view.getTxt_textoAviso().setText("Login realizado com sucesso!");
+            telaMenuUser tmu = new telaMenuUser();
+            tmu.setVisible(true);
+            view.dispose();
+        } else {
+            view.getTxt_textoAviso().setText("Usuário ou senha inválidos.");
         }
-    } 
+
+        conn.close();
+    } catch (SQLException e) {
+        view.getTxt_textoAviso().setText("Erro no banco de dados: " + e.getMessage());
+    }
+}
 }

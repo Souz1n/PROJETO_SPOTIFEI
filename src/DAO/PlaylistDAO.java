@@ -3,6 +3,7 @@ package DAO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import Model.Playlist;
 
 public class PlaylistDAO {
     private final Connection conn;
@@ -11,35 +12,50 @@ public class PlaylistDAO {
         this.conn = conn;
     }
 
-    public void criarPlaylist(String nome) throws SQLException {
-        String sql = "INSERT INTO playlist (nome) VALUES (?)";
+    public void criarPlaylist(String nome, int id_user) throws SQLException {
+        String sql = "INSERT INTO playlist (nome, id_usuario) VALUES (?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nome);
-        }
-    }
-
-    public void adicionarMusicaNaPlaylist(int idMusica, String nomePlaylist, int idUsuario) throws SQLException {
-        String sql = "INSERT INTO playlist (id_musica, nome_playlist, id_usuario) VALUES (?, ?, ?)";
-        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, idMusica);
-            stmt.setString(2, nomePlaylist);
-            stmt.setInt(3, idUsuario);
+            stmt.setInt(2, id_user);
             stmt.executeUpdate();
         }
     }
+    
+    
+    public void removerPlaylist(Playlist musica) throws SQLException {
+        try (conn) {
+            String sql = "DELETE FROM musica WHERE id_musica = ?";
+            PreparedStatement statement = conn.prepareStatement(sql);
+//            statement.setInt(1, musica.get());
+            statement.execute(); 
+        }
+    }
 
-    public List<String> listarPlaylists(int idUsuario) throws SQLException {
-        List<String> playlists = new ArrayList<>();
-        String sql = "SELECT DISTINCT nome_playlist FROM playlist WHERE id_usuario = ?";
+    public List<Playlist> listarTodasPlaylist(int id_user) throws SQLException {
+        List<Playlist> lista = new ArrayList<>();
+
+        String sql = "SELECT id, nome, id_usuario "
+                   + "FROM playlist "
+                   + "WHERE id_usuario = ?";
+
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, idUsuario);
-            try (ResultSet rs = stmt.executeQuery()) {
+            stmt.setInt(1, id_user);  
+
+            try (ResultSet rs = stmt.executeQuery()) { 
                 while (rs.next()) {
-                    playlists.add(rs.getString("nome_playlist"));
+                    int id_playlist = rs.getInt("id");
+                    int id_usuario = rs.getInt("id_usuario");
+                    String nome = rs.getString("nome");
+
+                    lista.add(new Playlist(id_usuario, id_playlist, nome));
                 }
             }
         }
-        return playlists;
+
+        return lista;
     }
+
+
+
 }
 

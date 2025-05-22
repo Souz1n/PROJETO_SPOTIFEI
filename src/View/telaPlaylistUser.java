@@ -17,12 +17,12 @@ import Controller.ControlePlaylistUser;
  *
  * @author unifgalvarenga
  */
-public class telaPlayslistUser extends javax.swing.JFrame {
+public class telaPlaylistUser extends javax.swing.JFrame {
 
     /**
      * Creates new form telaPlayslistUser
      */
-    public telaPlayslistUser() {
+    public telaPlaylistUser() {
         initComponents();
         cpu = new ControlePlaylistUser(this);
     }
@@ -213,14 +213,6 @@ public class telaPlayslistUser extends javax.swing.JFrame {
         this.txt_criarPlayNam = txt_criarPlayNam;
     }
 
-    public JTextField getTxt_ediPlayNam() {
-        return txt_ediPlayNam;
-    }
-
-    public void setTxt_ediPlayNam(JTextField txt_ediPlayNam) {
-        this.txt_ediPlayNam = txt_ediPlayNam;
-    }
-
     
     
 
@@ -236,9 +228,10 @@ public class telaPlayslistUser extends javax.swing.JFrame {
         jp_criarPlaylist = new javax.swing.JPanel();
         lbl_tituloEditPlaylist = new javax.swing.JLabel();
         lbl_editPlaylNam = new javax.swing.JLabel();
-        txt_ediPlayNam = new javax.swing.JTextField();
         bt_ediPlaylist = new javax.swing.JButton();
         lbl_ediCriarPRes = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jl_editPlaylist = new javax.swing.JList<>();
         jp_criarPlaylist1 = new javax.swing.JPanel();
         bt_voltarMenuUser1 = new javax.swing.JButton();
         lbl_tituloCriaPlaylist = new javax.swing.JLabel();
@@ -266,17 +259,10 @@ public class telaPlayslistUser extends javax.swing.JFrame {
         lbl_editPlaylNam.setForeground(new java.awt.Color(255, 255, 255));
         lbl_editPlaylNam.setText("Nome da Playlist:");
 
-        txt_ediPlayNam.setBackground(new java.awt.Color(204, 204, 204));
-        txt_ediPlayNam.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_ediPlayNamActionPerformed(evt);
-            }
-        });
-
         bt_ediPlaylist.setBackground(new java.awt.Color(0, 0, 0));
         bt_ediPlaylist.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_ediPlaylist.setForeground(new java.awt.Color(255, 255, 255));
-        bt_ediPlaylist.setText("Criar");
+        bt_ediPlaylist.setText("Editar");
         bt_ediPlaylist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_ediPlaylistActionPerformed(evt);
@@ -285,44 +271,50 @@ public class telaPlayslistUser extends javax.swing.JFrame {
 
         lbl_ediCriarPRes.setForeground(new java.awt.Color(255, 255, 255));
 
+        jl_editPlaylist.setBackground(new java.awt.Color(204, 204, 204));
+        jl_editPlaylist.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jl_editPlaylist.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jl_editPlaylist);
+
         javax.swing.GroupLayout jp_criarPlaylistLayout = new javax.swing.GroupLayout(jp_criarPlaylist);
         jp_criarPlaylist.setLayout(jp_criarPlaylistLayout);
         jp_criarPlaylistLayout.setHorizontalGroup(
             jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(214, Short.MAX_VALUE)
+                .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
+            .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addComponent(bt_ediPlaylist)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addComponent(lbl_editPlaylNam)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_criarPlaylistLayout.createSequentialGroup()
-                        .addGap(167, 179, Short.MAX_VALUE)
-                        .addComponent(bt_ediPlaylist)
-                        .addGap(94, 94, 94))
-                    .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                        .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                                .addComponent(lbl_editPlaylNam)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_ediPlayNam)))
-                        .addGap(46, 46, 46))
-                    .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(lbl_tituloEditPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_tituloEditPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_criarPlaylistLayout.setVerticalGroup(
             jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbl_tituloEditPlaylist)
-                .addGap(54, 54, 54)
-                .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_editPlaylNam, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_ediPlayNam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(15, 15, 15)
+                .addComponent(lbl_editPlaylNam, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(bt_ediPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76))
         );
@@ -490,7 +482,7 @@ public class telaPlayslistUser extends javax.swing.JFrame {
                 .addComponent(jp_minhasPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jp_criarPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -505,10 +497,6 @@ public class telaPlayslistUser extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_ediPlayNamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ediPlayNamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_ediPlayNamActionPerformed
-
     private void bt_ediPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ediPlaylistActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bt_ediPlaylistActionPerformed
@@ -518,12 +506,20 @@ public class telaPlayslistUser extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_delPlaylActionPerformed
 
     private void bt_voltarMenuUser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarMenuUser1ActionPerformed
-        // TODO add your handling code here:
+        cpu.voltarLog();
     }//GEN-LAST:event_bt_voltarMenuUser1ActionPerformed
 
     private void txt_criarPlayNamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_criarPlayNamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_criarPlayNamActionPerformed
+
+    public JList<String> getJl_editPlaylist() {
+        return jl_editPlaylist;
+    }
+
+    public void setJl_editPlaylist(JList<String> jl_editPlaylist) {
+        this.jl_editPlaylist = jl_editPlaylist;
+    }
 
     private void bt_criarPlaylist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_criarPlaylist1ActionPerformed
         cpu.CriarPlaylist();
@@ -571,7 +567,9 @@ public class telaPlayslistUser extends javax.swing.JFrame {
     private javax.swing.JButton bt_ediPlaylist;
     private javax.swing.JButton bt_voltarMenuUser1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JList<String> jl_delPlaylist;
+    private javax.swing.JList<String> jl_editPlaylist;
     private javax.swing.JPanel jp_criarPlaylist;
     private javax.swing.JPanel jp_criarPlaylist1;
     private javax.swing.JPanel jp_minhasPlaylist;
@@ -585,6 +583,5 @@ public class telaPlayslistUser extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_tituloDelPlaylist;
     private javax.swing.JLabel lbl_tituloEditPlaylist;
     private javax.swing.JTextField txt_criarPlayNam;
-    private javax.swing.JTextField txt_ediPlayNam;
     // End of variables declaration//GEN-END:variables
 }

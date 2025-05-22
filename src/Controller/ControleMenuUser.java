@@ -6,7 +6,7 @@ import DAO.SourceMusDAO;
 import Model.SessaoUsuario;
 import Model.SourMus;
 import View.telaMenuUser;
-import View.telaPlayslistUser;
+import View.telaPlaylistUser;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -112,8 +112,8 @@ public class ControleMenuUser {
         new View.telaLogCad().setVisible(true);
     }
     
-    public void genenciarPlaylist() {
+    public void gerenciarPlaylist() {
         view.dispose();
-        new View.telaPlayslistUser().setVisible(true);
+        new View.telaPlaylistUser().setVisible(true);
     }
 }

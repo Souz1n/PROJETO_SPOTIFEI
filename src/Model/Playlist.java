@@ -1,16 +1,16 @@
 package Model;
 
 public class Playlist {
-    private int id_usuario;
-    private int id_musica;
-    private String nome;
+    public int id_usuario;
+    public int id_playlist;
+    public String nome;
 
     public Playlist() {}
 
-    public Playlist(int idUsuario, int idMusica, String nomePlaylist) {
-        this.id_usuario = id_usuario;
-        this.id_musica = id_musica;
-        this.nome = nome;
+    public Playlist(int idUsuario, int idPlaylist, String nomePlaylist) {
+        this.id_usuario = idUsuario;
+        this.id_playlist = idPlaylist;
+        this.nome = nomePlaylist;
     }
 
     public int getId_usuario() {
@@ -21,12 +21,12 @@ public class Playlist {
         this.id_usuario = id_usuario;
     }
 
-    public int getId_musica() {
-        return id_musica;
+    public int getId_playlist() {
+        return id_playlist;
     }
 
-    public void setId_musica(int id_musica) {
-        this.id_musica = id_musica;
+    public void setId_playlist(int id_playlist) {
+        this.id_playlist = id_playlist;
     }
 
     public String getNome() {
