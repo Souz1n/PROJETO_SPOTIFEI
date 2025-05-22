@@ -1,41 +1,44 @@
 package Model;
 
 public class Historico {
-    private String nomeMusica;
-    private String artista;
-    private String status;
+    public String nome;
+    public int id_usuario;
+    public String tipo;
 
     public Historico() {
     }
 
-    public Historico(String nomeMusica, String artista, String status) {
-        this.nomeMusica = nomeMusica;
-        this.artista = artista;
-        this.status = status;
+    public Historico(String nome, int id_usuario, String tipo) {
+        this.nome = nome;
+        this.id_usuario = id_usuario;
+        this.tipo = tipo;
     }
 
-    public String getNomeMusica() {
-        return nomeMusica;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeMusica(String nomeMusica) {
-        this.nomeMusica = nomeMusica;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getArtista() {
-        return artista;
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public void setArtista(String artista) {
-        this.artista = artista;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public String getStatus() {
-        return status;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
+    
+    
+    
     
 }

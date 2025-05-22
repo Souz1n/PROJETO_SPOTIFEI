@@ -11,37 +11,60 @@ public class HistoricoDAO {
     public HistoricoDAO(Connection conn) {
         this.conn = conn;
     }
-
-    public List<String> ultimasBuscas(String nomeUser) throws SQLException {
-        String sql = "SELECT nome_musica FROM historico WHERE nome_user = ? ORDER BY id DESC LIMIT 10";
-        PreparedStatement stmt = conn.prepareStatement(sql);
-        stmt.setString(1, nomeUser);
-        ResultSet rs = stmt.executeQuery();
-
-        List<String> musicas = new ArrayList<>();
-        while (rs.next()) {
-            musicas.add(rs.getString("nome_musica"));
+ 
+    public void inserirHistorico(String nome_musica, int id_usuario, String tipo) 
+        throws SQLException {
+        String sql = "INSERT INTO historico (nome_musica, id_usuario, tipo) "
+                + "VALUES (?, ?, ?)";
+        
+        try (PreparedStatement statement = conn.prepareStatement(sql)) {
+            statement.setString(1, nome_musica);
+            statement.setInt(2, id_usuario);
+            statement.setString(3, tipo);
+            statement.executeUpdate();
         }
-        return musicas;
+    }
+    
+    public boolean existeCurtida(int idUsuario, String nomeMusica) 
+        throws SQLException {
+        String sql = "SELECT COUNT(*) "
+                   + "FROM curtidas c "
+                   + "JOIN musica m ON c.id_musica = m.id "
+                   + "WHERE c.id_usuario = ? AND m.nome_musica = ?";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idUsuario);
+            stmt.setString(2, nomeMusica);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            }
+        }
+        return false;
     }
 
-    public List<Historico> curtidasOuDescurtidas(String nomeUser, boolean status) throws SQLException {
-        String sql = "SELECT nome_musica, artista FROM curtidas WHERE nome_user = ? AND status = ?";
-    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-    stmt.setString(1, nomeUser);
-    stmt.setBoolean(2, status);
-        try (ResultSet rs = stmt.executeQuery()) {
+    public List<Historico> carregarHistorico(int id_user, String tipo) 
+            throws SQLException {
+        String sql = "SELECT nome_musica "
+                   + "FROM historico "
+                   + "WHERE id_usuario = ? AND tipo = ?";
 
-        final List<Historico> lista = new ArrayList<>();
-        while (rs.next()) {
-            lista.add(new Historico(
-                rs.getString("nome_musica"),
-                rs.getString("artista"),
-                status ? "Curtida" : "Descurtida"
-            ));
-        }
-        return lista;
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id_user);
+            stmt.setString(2, tipo);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                final List<Historico> lista = new ArrayList<>();
+
+                while (rs.next()) {
+                    Historico h = new Historico();
+                    h.setNome(rs.getString("nome_musica"));
+                    lista.add(h);
+                }
+
+                return lista;
             }
         }
     }
+
 }

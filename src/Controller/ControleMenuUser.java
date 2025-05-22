@@ -1,19 +1,14 @@
 package Controller;
 
-import DAO.Conexao;
-import DAO.CurtidaDAO;
-import DAO.SourceMusDAO;
-import Model.SessaoUsuario;
-import Model.SourMus;
-import View.telaHistoricoUser;
-import View.telaMenuUser;
+import DAO.*;
+import Model.*;
+import View.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class ControleMenuUser {
     
     private final telaMenuUser view;
-    private String nomeUsuarioLogado;
 
     public ControleMenuUser(telaMenuUser view) {
         this.view = view;
@@ -21,7 +16,6 @@ public class ControleMenuUser {
     
     public ControleMenuUser(telaMenuUser view, String nomeUsuario) {
     this.view = view;
-    this.nomeUsuarioLogado = nomeUsuario;
 }
 
     public void consultarMusica() {  
@@ -105,13 +99,86 @@ public class ControleMenuUser {
         }
     }
     
-    public void abrirHistorico() {
-    telaHistoricoUser thu = new telaHistoricoUser();
-    ControleHistoricoUser chu = new ControleHistoricoUser(thu, nomeUsuarioLogado);
-    thu.setVisible(true);
-    view.dispose();
-}
+//    public void abrirHistorico() {
+//    telaHistoricoUser thu = new telaHistoricoUser();
+//    ControleHistoricoUser chu = new ControleHistoricoUser(thu, nomeUsuarioLogado);
+//    thu.setVisible(true);
+//    view.dispose();
+//    }
+    
+    public void InserirHistoricoMusica() {
+        String nome = view.getTxt_barraPesquisaMus().getText();
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "source";
+        
+        Historico insHistorico = new Historico();
+        
+        insHistorico.setNome(nome);
 
+        try {
+            Connection conn = new Conexao().getConnection();
+            HistoricoDAO dao = new HistoricoDAO(conn);
+            dao.inserirHistorico(nome, id_user, tipo);
+            conn.close();
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao enviar histórico: " + e.getMessage());
+        }
+    }   
+    
+    public void InserirHistoricoCurtida() {
+        String nome = view.getTxt_barraPesquisaMus().getText();
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "curtida";
+        
+        Historico insHistorico = new Historico();
+        
+        insHistorico.setNome(nome);
+
+        try {
+            Connection conn = new Conexao().getConnection();
+            HistoricoDAO dao = new HistoricoDAO(conn);
+            dao.inserirHistorico(nome, id_user, tipo);
+            conn.close();
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao enviar histórico: " + e.getMessage());
+        }
+    }   
+    
+        public void InserirHistoricoDescurtida() {
+        String nome = view.getTxt_barraPesquisaMus().getText();
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "descurtida";
+        
+        Historico insHistorico = new Historico();
+        
+        insHistorico.setNome(nome);
+
+        try {
+            Connection conn = new Conexao().getConnection();
+            HistoricoDAO dao = new HistoricoDAO(conn);
+            dao.inserirHistorico(nome, id_user, tipo);
+            conn.close();
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao enviar histórico: " + e.getMessage());
+        }
+    }   
+        
+        
+    public boolean VerificarCurtirMusica(String nome_musica) {
+        int id_usuario = SessaoUsuario.getId_usuario();
+        try {
+            Connection conn = new Conexao().getConnection();
+            HistoricoDAO dao = new HistoricoDAO(conn);
+            return !dao.existeCurtida(id_usuario, nome_musica);
+        } catch (SQLException e) {
+            System.out.println("Erro ao curtir música: " + e.getMessage());
+        }
+        return false;
+    }
+    
     public void sairSource() {
         view.getPn_infoMus().setVisible(false);
     }
@@ -121,8 +188,12 @@ public class ControleMenuUser {
         new View.telaLogCad().setVisible(true);
     }
     
-    public void gerenciarPlaylist() {
+    public void fechar() {
         view.dispose();
-        new View.telaPlaylistUser().setVisible(true);
+    }
+    
+    public void Historico() {
+        view.dispose();
+        new View.telaHistoricoUser().setVisible(true);
     }
 }

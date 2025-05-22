@@ -4,13 +4,13 @@
  */
 package View;
 
-import Controller.ControleHistoricoUser;
+//import Controller.ControleHistoricoUser;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import Controller.ControleMenuUser;
-import View.telaPlaylistUser;
+import Controller.*;
+import View.*;
 import Controller.ControlePlaylistUser;
 
 /**
@@ -148,6 +148,55 @@ public class telaMenuUser extends javax.swing.JFrame {
         this.lbl_sourceMusGenRes = lbl_sourceMusGen;
     }
 
+    public JButton getBt_likeMus() {
+        return bt_likeMus;
+    }
+
+    public void setBt_likeMus(JButton bt_likeMus) {
+        this.bt_likeMus = bt_likeMus;
+    }
+
+    public JButton getBt_dislikeMus() {
+        return bt_dislikeMus;
+    }
+
+    public void setBt_dislikeMus(JButton bt_dislikeMus) {
+        this.bt_dislikeMus = bt_dislikeMus;
+    }
+
+    public JButton getBt_genHistoricoUser() {
+        return bt_genHistoricoUser;
+    }
+
+    public void setBt_genHistoricoUser(JButton bt_genHistoricoUser) {
+        this.bt_genHistoricoUser = bt_genHistoricoUser;
+    }
+
+    public JButton getBt_genPlaylist() {
+        return bt_genPlaylist;
+    }
+
+    public void setBt_genPlaylist(JButton bt_genPlaylist) {
+        this.bt_genPlaylist = bt_genPlaylist;
+    }
+
+    public JButton getBt_sourcCurtir() {
+        return bt_sourcCurtir;
+    }
+
+    public void setBt_sourcCurtir(JButton bt_sourcCurtir) {
+        this.bt_sourcCurtir = bt_sourcCurtir;
+    }
+
+    public JButton getBt_sourcDescurtir() {
+        return bt_sourcDescurtir;
+    }
+
+    public void setBt_sourcDescurtir(JButton bt_sourcDescurtir) {
+        this.bt_sourcDescurtir = bt_sourcDescurtir;
+    }
+
+    
 
     
 
@@ -177,7 +226,7 @@ public class telaMenuUser extends javax.swing.JFrame {
         bt_voltarLog = new javax.swing.JButton();
         lbl_sourMusStatusBarra = new javax.swing.JLabel();
         bt_genPlaylist = new javax.swing.JButton();
-        bt_historicoUser = new javax.swing.JButton();
+        bt_genHistoricoUser = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -328,10 +377,11 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
-        bt_historicoUser.setText("Histórico");
-        bt_historicoUser.addActionListener(new java.awt.event.ActionListener() {
+        bt_genHistoricoUser.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_genHistoricoUser.setText("Histórico");
+        bt_genHistoricoUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_historicoUserActionPerformed(evt);
+                bt_genHistoricoUserActionPerformed(evt);
             }
         });
 
@@ -340,25 +390,24 @@ public class telaMenuUser extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(bt_voltarLog)
                         .addGap(293, 293, 293)
                         .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(69, 69, 69)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(141, 141, 141)
-                                .addComponent(txt_barraPesquisaMus, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bt_genPlaylist)
-                            .addComponent(bt_souceMus)
-                            .addComponent(bt_historicoUser))))
+                                .addComponent(txt_barraPesquisaMus, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bt_souceMus))
+                            .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(bt_genPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bt_genHistoricoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -373,11 +422,11 @@ public class telaMenuUser extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(100, 100, 100)
                         .addComponent(bt_genPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(bt_historicoUser)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_genHistoricoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -394,6 +443,8 @@ public class telaMenuUser extends javax.swing.JFrame {
 
     private void bt_souceMusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_souceMusActionPerformed
         cmu.consultarMusica();
+        cmu.InserirHistoricoMusica();
+        
     }//GEN-LAST:event_bt_souceMusActionPerformed
 
     private void bt_fechaSourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_fechaSourceActionPerformed
@@ -406,14 +457,19 @@ public class telaMenuUser extends javax.swing.JFrame {
 
     private void bt_sourcDescurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcDescurtirActionPerformed
         cmu.descurtirMusica(txt_barraPesquisaMus.getText());
+        cmu.InserirHistoricoDescurtida();
     }//GEN-LAST:event_bt_sourcDescurtirActionPerformed
 
     private void bt_sourcCurtirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sourcCurtirActionPerformed
-        cmu.curtirMusica(txt_barraPesquisaMus.getText());
+        String nomeMusica = txt_barraPesquisaMus.getText();
+        cmu.curtirMusica(nomeMusica);
+        if (cmu.VerificarCurtirMusica(nomeMusica)) {
+            cmu.InserirHistoricoCurtida();
+        }
     }//GEN-LAST:event_bt_sourcCurtirActionPerformed
 
     private void bt_genPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_genPlaylistActionPerformed
-        cmu.gerenciarPlaylist();
+        cmu.fechar();
         telaPlaylistUser telaPlU = new telaPlaylistUser(); 
         ControlePlaylistUser cpu = new ControlePlaylistUser(telaPlU); 
         
@@ -421,9 +477,16 @@ public class telaMenuUser extends javax.swing.JFrame {
         telaPlU.setVisible(true); 
     }//GEN-LAST:event_bt_genPlaylistActionPerformed
 
-    private void bt_historicoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_historicoUserActionPerformed
+    private void bt_genHistoricoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_genHistoricoUserActionPerformed
 
-    }//GEN-LAST:event_bt_historicoUserActionPerformed
+        telaHistoricoUser telaHisU = new telaHistoricoUser(); 
+        ControleHistoricoUser chu = new ControleHistoricoUser(telaHisU); 
+        
+        chu.carregarPlaylistMusica();
+        chu.carregarPlaylistDescurtida();
+        chu.carregarPlaylistCurtida(); 
+        telaHisU.setVisible(true);
+    }//GEN-LAST:event_bt_genHistoricoUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -465,8 +528,8 @@ public class telaMenuUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_fechaSource;
+    private javax.swing.JButton bt_genHistoricoUser;
     private javax.swing.JButton bt_genPlaylist;
-    private javax.swing.JButton bt_historicoUser;
     private javax.swing.JButton bt_souceMus;
     private javax.swing.JButton bt_sourcCurtir;
     private javax.swing.JButton bt_sourcDescurtir;

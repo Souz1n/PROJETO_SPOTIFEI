@@ -506,7 +506,7 @@ public class telaPlaylistUser extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_delPlaylActionPerformed
 
     private void bt_voltarMenuUser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarMenuUser1ActionPerformed
-        cpu.voltarLog();
+        cpu.voltarMenu();
     }//GEN-LAST:event_bt_voltarMenuUser1ActionPerformed
 
     private void txt_criarPlayNamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_criarPlayNamActionPerformed

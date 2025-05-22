@@ -6,8 +6,10 @@ package View;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import Controller.ControleHistoricoUser;
 
 /**
  *
@@ -20,56 +22,7 @@ public class telaHistoricoUser extends javax.swing.JFrame {
      */
     public telaHistoricoUser() {
         initComponents();
-    }
-
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
-    }
-
-    public void setjScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
-    }
-
-    public JScrollPane getjScrollPane2() {
-        return jScrollPane2;
-    }
-
-    public void setjScrollPane2(JScrollPane jScrollPane2) {
-        this.jScrollPane2 = jScrollPane2;
-    }
-
-    public JScrollPane getjScrollPane3() {
-        return jScrollPane3;
-    }
-
-    public void setjScrollPane3(JScrollPane jScrollPane3) {
-        this.jScrollPane3 = jScrollPane3;
-    }
-    
-    
-
-    public JButton getBt_musicasCurtidas() {
-        return bt_musicasCurtidas;
-    }
-
-    public void setBt_musicasCurtidas(JButton bt_musicasCurtidas) {
-        this.bt_musicasCurtidas = bt_musicasCurtidas;
-    }
-
-    public JButton getBt_musicasDescurtidas() {
-        return bt_musicasDescurtidas;
-    }
-
-    public void setBt_musicasDescurtidas(JButton bt_musicasDescurtidas) {
-        this.bt_musicasDescurtidas = bt_musicasDescurtidas;
-    }
-
-    public JButton getBt_ultimasBuscas() {
-        return bt_ultimasBuscas;
-    }
-
-    public void setBt_ultimasBuscas(JButton bt_ultimasBuscas) {
-        this.bt_ultimasBuscas = bt_ultimasBuscas;
+        chu = new ControleHistoricoUser(this);
     }
 
     public JLabel getLbl_tituloLogin() {
@@ -80,29 +33,86 @@ public class telaHistoricoUser extends javax.swing.JFrame {
         this.lbl_tituloLogin = lbl_tituloLogin;
     }
 
-    public JTextArea getTxt_areaHistoricoBuscas() {
-        return txt_areaHistoricoBuscas;
+    public JButton getjButton2() {
+        return jButton2;
     }
 
-    public void setTxt_areaHistoricoBuscas(JTextArea txt_areaHistoricoBuscas) {
-        this.txt_areaHistoricoBuscas = txt_areaHistoricoBuscas;
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
     }
 
-    public JTextArea getTxt_areaHistoricoCurtidas() {
-        return txt_areaHistoricoCurtidas;
+    public JScrollPane getjScrollPane4() {
+        return jScrollPane4;
     }
 
-    public void setTxt_areaHistoricoCurtidas(JTextArea txt_areaHistoricoCurtidas) {
-        this.txt_areaHistoricoCurtidas = txt_areaHistoricoCurtidas;
+    public void setjScrollPane4(JScrollPane jScrollPane4) {
+        this.jScrollPane4 = jScrollPane4;
     }
 
-    public JTextArea getTxt_areaHistoricoDescurtidas() {
-        return txt_areaHistoricoDescurtidas;
+    public JScrollPane getjScrollPane5() {
+        return jScrollPane5;
     }
 
-    public void setTxt_areaHistoricoDescurtidas(JTextArea txt_areaHistoricoDescurtidas) {
-        this.txt_areaHistoricoDescurtidas = txt_areaHistoricoDescurtidas;
+    public void setjScrollPane5(JScrollPane jScrollPane5) {
+        this.jScrollPane5 = jScrollPane5;
     }
+
+    public JScrollPane getjScrollPane6() {
+        return jScrollPane6;
+    }
+
+    public void setjScrollPane6(JScrollPane jScrollPane6) {
+        this.jScrollPane6 = jScrollPane6;
+    }
+
+    public JList<String> getJl_buscaCurtHist() {
+        return jl_buscaCurtHist;
+    }
+
+    public void setJl_buscaCurtHist(JList<String> jl_buscaCurtHist) {
+        this.jl_buscaCurtHist = jl_buscaCurtHist;
+    }
+
+    public JList<String> getJl_buscaDescHist() {
+        return jl_buscaDescHist;
+    }
+
+    public void setJl_buscaDescHist(JList<String> jl_buscaDescHist) {
+        this.jl_buscaDescHist = jl_buscaDescHist;
+    }
+
+    public JList<String> getJl_buscaMusHist() {
+        return jl_buscaMusHist;
+    }
+
+    public void setJl_buscaMusHist(JList<String> jl_buscaMusHist) {
+        this.jl_buscaMusHist = jl_buscaMusHist;
+    }
+
+    public JLabel getLbl_busCurtHist() {
+        return lbl_busCurtHist;
+    }
+
+    public void setLbl_busCurtHist(JLabel lbl_busCurtHist) {
+        this.lbl_busCurtHist = lbl_busCurtHist;
+    }
+
+    public JLabel getLbl_busDescHist() {
+        return lbl_busDescHist;
+    }
+
+    public void setLbl_busDescHist(JLabel lbl_busDescHist) {
+        this.lbl_busDescHist = lbl_busDescHist;
+    }
+
+    public JLabel getLbl_busMusHist() {
+        return lbl_busMusHist;
+    }
+
+    public void setLbl_busMusHist(JLabel lbl_busMusHist) {
+        this.lbl_busMusHist = lbl_busMusHist;
+    }
+
     
     
 
@@ -116,109 +126,116 @@ public class telaHistoricoUser extends javax.swing.JFrame {
     private void initComponents() {
 
         lbl_tituloLogin = new javax.swing.JLabel();
-        bt_ultimasBuscas = new javax.swing.JButton();
-        bt_musicasCurtidas = new javax.swing.JButton();
-        bt_musicasDescurtidas = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txt_areaHistoricoDescurtidas = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txt_areaHistoricoBuscas = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        txt_areaHistoricoCurtidas = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jl_buscaMusHist = new javax.swing.JList<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jl_buscaCurtHist = new javax.swing.JList<>();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jl_buscaDescHist = new javax.swing.JList<>();
+        lbl_busMusHist = new javax.swing.JLabel();
+        lbl_busCurtHist = new javax.swing.JLabel();
+        lbl_busDescHist = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        bt_voltarLog = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
         lbl_tituloLogin.setText("Histórico");
 
-        bt_ultimasBuscas.setText("ÚLTIMAS BUSCAS");
-        bt_ultimasBuscas.addActionListener(new java.awt.event.ActionListener() {
+        jl_buscaMusHist.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jl_buscaMusHist);
+
+        jl_buscaCurtHist.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(jl_buscaCurtHist);
+
+        jl_buscaDescHist.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane6.setViewportView(jl_buscaDescHist);
+
+        lbl_busMusHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busMusHist.setText("Histórico Buscas");
+        lbl_busMusHist.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        lbl_busCurtHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busCurtHist.setText("Históricos Curtidas");
+
+        lbl_busDescHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busDescHist.setText("Histórico Descurtidas");
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/img_refresh.png"))); // NOI18N
+
+        bt_voltarLog.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarLog.setText("Voltar");
+        bt_voltarLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_ultimasBuscasActionPerformed(evt);
+                bt_voltarLogActionPerformed(evt);
             }
         });
-
-        bt_musicasCurtidas.setText("ÚLTIMAS CURTIDAS");
-        bt_musicasCurtidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_musicasCurtidasActionPerformed(evt);
-            }
-        });
-
-        bt_musicasDescurtidas.setText("ÚLTIMAS DESCURTIDAS");
-        bt_musicasDescurtidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_musicasDescurtidasActionPerformed(evt);
-            }
-        });
-
-        txt_areaHistoricoDescurtidas.setColumns(20);
-        txt_areaHistoricoDescurtidas.setRows(5);
-        jScrollPane1.setViewportView(txt_areaHistoricoDescurtidas);
-
-        txt_areaHistoricoBuscas.setColumns(20);
-        txt_areaHistoricoBuscas.setRows(5);
-        jScrollPane2.setViewportView(txt_areaHistoricoBuscas);
-
-        txt_areaHistoricoCurtidas.setColumns(20);
-        txt_areaHistoricoCurtidas.setRows(5);
-        jScrollPane3.setViewportView(txt_areaHistoricoCurtidas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bt_musicasDescurtidas)
-                            .addComponent(bt_musicasCurtidas)
-                            .addComponent(bt_ultimasBuscas))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                .addGap(132, 132, 132)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_busMusHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_busCurtHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_busDescHist))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(lbl_tituloLogin)
+                .addContainerGap()
+                .addComponent(bt_voltarLog)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(bt_ultimasBuscas)
+                .addComponent(lbl_busMusHist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_busCurtHist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bt_musicasCurtidas)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_busDescHist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bt_musicasDescurtidas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bt_musicasDescurtidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_musicasDescurtidasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bt_musicasDescurtidasActionPerformed
-
-    private void bt_musicasCurtidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_musicasCurtidasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bt_musicasCurtidasActionPerformed
-
-    private void bt_ultimasBuscasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ultimasBuscasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bt_ultimasBuscasActionPerformed
+    private void bt_voltarLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarLogActionPerformed
+        chu.voltarLog();
+    }//GEN-LAST:event_bt_voltarLogActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,17 +271,21 @@ public class telaHistoricoUser extends javax.swing.JFrame {
 //            }
 //        });
 //    }
+    
+    private final ControleHistoricoUser chu;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bt_musicasCurtidas;
-    private javax.swing.JButton bt_musicasDescurtidas;
-    private javax.swing.JButton bt_ultimasBuscas;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JButton bt_voltarLog;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JList<String> jl_buscaCurtHist;
+    private javax.swing.JList<String> jl_buscaDescHist;
+    private javax.swing.JList<String> jl_buscaMusHist;
+    private javax.swing.JLabel lbl_busCurtHist;
+    private javax.swing.JLabel lbl_busDescHist;
+    private javax.swing.JLabel lbl_busMusHist;
     private javax.swing.JLabel lbl_tituloLogin;
-    private javax.swing.JTextArea txt_areaHistoricoBuscas;
-    private javax.swing.JTextArea txt_areaHistoricoCurtidas;
-    private javax.swing.JTextArea txt_areaHistoricoDescurtidas;
     // End of variables declaration//GEN-END:variables
 }

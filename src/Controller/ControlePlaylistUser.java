@@ -62,9 +62,10 @@ public class ControlePlaylistUser {
     
 
     
-    public void voltarLog() {
-        view.dispose();
-        new View.telaMenuUser().setVisible(true);
-    }
+    public void voltarMenu(){
+        telaMenuUser tmu = new telaMenuUser();
+        tmu.setVisible(true);
+        view.dispose();//fecha o menu
+    }    
     
 }

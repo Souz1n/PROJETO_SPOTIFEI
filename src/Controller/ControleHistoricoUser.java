@@ -1,54 +1,96 @@
 package Controller;
 
-import DAO.HistoricoDAO;
-import DAO.Conexao;
-import Model.Historico;
+import DAO.*;
+import Model.*;
 import View.telaHistoricoUser;
-
+import View.telaHistoricoUser;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import javax.swing.DefaultListModel;
 
 public class ControleHistoricoUser {
-    private final telaHistoricoUser view;
-    private final String nomeUsuario;
+        
+    telaHistoricoUser view;
 
-    public ControleHistoricoUser(telaHistoricoUser view, String nomeUsuario) {
+    public ControleHistoricoUser(telaHistoricoUser view) {
         this.view = view;
-        this.nomeUsuario = nomeUsuario;
-        carregarDados();
     }
 
-    public void carregarDados() {
-        limparTextAreas();
+    public void carregarPlaylistMusica() {
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "source";
 
-        try (Connection conn = new Conexao().getConnection()) {
+        try {
+            Connection conn = new Conexao().getConnection();
             HistoricoDAO dao = new HistoricoDAO(conn);
+            List<Historico> todoHistorico = 
+            dao.carregarHistorico(id_user, tipo);
 
-            List<String> buscas = dao.ultimasBuscas(nomeUsuario);
-            for (String musica : buscas) {
-                view.getTxt_areaHistoricoBuscas().append(musica + "\n");
-            }
+            DefaultListModel<String> modelo = new DefaultListModel<>();
+        for (Historico p : todoHistorico) {
+            String nome = p.getNome();    
+            modelo.addElement(nome);
+        }
 
-            List<Historico> curtidas = dao.curtidasOuDescurtidas(nomeUsuario, true);
-            for (Historico h : curtidas) {
-                view.getTxt_areaHistoricoCurtidas().append(h.getNomeMusica() + " - " + h.getArtista() + "\n");
-            }
+            view.getJl_buscaMusHist().setModel(modelo);
 
-            List<Historico> descurtidas = dao.curtidasOuDescurtidas(nomeUsuario, false);
-            for (Historico h : descurtidas) {
-                view.getTxt_areaHistoricoDescurtidas().append(h.getNomeMusica() + " - " + h.getArtista() + "\n");
-            }
-
+            conn.close();
         } catch (SQLException e) {
-            System.out.println("Erro ao carregar histórico: " + e.getMessage());
+            System.out.println("Erro ao carregar playlists: " + e.getMessage());
         }
     }
+    
+    public void carregarPlaylistCurtida() {
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "curtida";
 
-    private void limparTextAreas() {
-        view.getTxt_areaHistoricoBuscas().setText("");
-        view.getTxt_areaHistoricoCurtidas().setText("");
-        view.getTxt_areaHistoricoDescurtidas().setText("");
+    try {
+        Connection conn = new Conexao().getConnection();
+        HistoricoDAO dao = new HistoricoDAO(conn);
+        List<Historico> todoHistorico = dao.carregarHistorico(id_user, tipo);
+
+        DefaultListModel<String> modelo = new DefaultListModel<>();
+        for (Historico p : todoHistorico) {
+            String nome = p.getNome();
+            modelo.addElement(nome);
+        }
+
+        view.getJl_buscaCurtHist().setModel(modelo);
+
+        conn.close();
+    } catch (SQLException e) {
+        System.out.println("Erro ao carregar playlists: " + e.getMessage());
+    }
+    }
+    
+    public void carregarPlaylistDescurtida() {
+        int id_user = SessaoUsuario.getId_usuario();
+        String tipo = "descurtida";
+
+        try {
+            Connection conn = new Conexao().getConnection();
+            HistoricoDAO dao = new HistoricoDAO(conn);
+            List<Historico> todoHistorico = 
+            dao.carregarHistorico(id_user, tipo);
+
+            DefaultListModel<String> modelo = new DefaultListModel<>();
+        for (Historico p : todoHistorico) {
+            String nome = p.getNome();    
+            modelo.addElement(nome);
+        }
+
+            view.getJl_buscaDescHist().setModel(modelo);
+
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao carregar playlists: " + e.getMessage());
+        }
+    }
+    
+    public void voltarLog() {
+        view.dispose();
+        new View.telaMenuUser().setVisible(true);
     }
 }
 

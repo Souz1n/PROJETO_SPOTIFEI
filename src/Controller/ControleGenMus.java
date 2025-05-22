@@ -84,6 +84,8 @@ public void cadastrarMusica() {
         }
     }
     
+ 
+    
     public void voltaMenu(){
         telaMenuAdm tma = new telaMenuAdm();
         tma.setVisible(true);
