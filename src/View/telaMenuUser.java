@@ -4,6 +4,7 @@
  */
 package View;
 
+import Controller.ControleHistoricoUser;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -23,8 +24,7 @@ public class telaMenuUser extends javax.swing.JFrame {
         initComponents();
         cmu = new ControleMenuUser(this);
         pn_infoMus.setVisible(false);
-
-    }
+}
 
     public JLabel getLbl_sourcNomeMusRes() {
         return lbl_sourcNomeMusRes;
@@ -177,6 +177,7 @@ public class telaMenuUser extends javax.swing.JFrame {
         bt_voltarLog = new javax.swing.JButton();
         lbl_sourMusStatusBarra = new javax.swing.JLabel();
         bt_genPlaylist = new javax.swing.JButton();
+        bt_historicoUser = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -327,6 +328,13 @@ public class telaMenuUser extends javax.swing.JFrame {
             }
         });
 
+        bt_historicoUser.setText("Histórico");
+        bt_historicoUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_historicoUserActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -349,7 +357,8 @@ public class telaMenuUser extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bt_genPlaylist)
-                            .addComponent(bt_souceMus))))
+                            .addComponent(bt_souceMus)
+                            .addComponent(bt_historicoUser))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -365,7 +374,9 @@ public class telaMenuUser extends javax.swing.JFrame {
                         .addComponent(pn_infoMus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(bt_genPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bt_genPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(bt_historicoUser)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -410,6 +421,10 @@ public class telaMenuUser extends javax.swing.JFrame {
         telaPlU.setVisible(true); 
     }//GEN-LAST:event_bt_genPlaylistActionPerformed
 
+    private void bt_historicoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_historicoUserActionPerformed
+
+    }//GEN-LAST:event_bt_historicoUserActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -451,6 +466,7 @@ public class telaMenuUser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_fechaSource;
     private javax.swing.JButton bt_genPlaylist;
+    private javax.swing.JButton bt_historicoUser;
     private javax.swing.JButton bt_souceMus;
     private javax.swing.JButton bt_sourcCurtir;
     private javax.swing.JButton bt_sourcDescurtir;
