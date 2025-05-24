@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -24,8 +41,10 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="bt_voltarLog" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
@@ -46,9 +65,31 @@
                           <Component id="bt_genPlaylist" max="32767" attributes="0"/>
                           <Component id="bt_genHistoricoUser" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
                       </Group>
+=======
+                      <Component id="txt_barraPesquisaMus" min="-2" pref="347" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="bt_souceMus" min="-2" max="-2" attributes="0"/>
+>>>>>>> de9802b8b1ed06ef139272e6263f0edb74fa0b9a
                   </Group>
+                  <Component id="pn_infoMus" min="-2" max="-2" attributes="0"/>
               </Group>
+<<<<<<< HEAD
               <EmptySpace pref="50" max="32767" attributes="0"/>
+=======
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="bt_genPlaylist" max="32767" attributes="0"/>
+                  <Component id="bt_genHistoricoUser" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="bt_voltarLog" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lbl_sourMusStatusBarra" min="-2" pref="328" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+>>>>>>> de9802b8b1ed06ef139272e6263f0edb74fa0b9a
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,7 +116,11 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="bt_voltarLog" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="lbl_sourMusStatusBarra" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+=======
+                  <Component id="lbl_sourMusStatusBarra" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+>>>>>>> de9802b8b1ed06ef139272e6263f0edb74fa0b9a
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -172,7 +217,7 @@
                           <Component id="bt_fechaSource" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lbl_sourceMusArtRes" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="lbl_sourMusArt" min="-2" pref="28" max="-2" attributes="0"/>

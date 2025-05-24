@@ -106,56 +106,28 @@ public class telaLogCad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bt_loginUsuario = new javax.swing.JButton();
-        bt_loginADM = new javax.swing.JButton();
-        bt_cadastrar = new javax.swing.JButton();
-        txt_nomeLogin = new javax.swing.JTextField();
-        txt_senhaLogin = new javax.swing.JTextField();
+        jColorChooser1 = new javax.swing.JColorChooser();
+        panel1 = new java.awt.Panel();
+        lbl_tituloLogin = new javax.swing.JLabel();
         lbl_nomeLogin = new javax.swing.JLabel();
         lbl_senhaLogin = new javax.swing.JLabel();
-        lbl_tituloLogin = new javax.swing.JLabel();
+        txt_nomeLogin = new javax.swing.JTextField();
+        txt_senhaLogin = new javax.swing.JTextField();
+        bt_loginADM = new javax.swing.JButton();
+        bt_loginUsuario = new javax.swing.JButton();
+        bt_cadastrar = new javax.swing.JButton();
         txt_textoAviso = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 153, 255));
 
-        bt_loginUsuario.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
-        bt_loginUsuario.setText("Login Usuário");
-        bt_loginUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_loginUsuarioActionPerformed(evt);
-            }
-        });
+        panel1.setBackground(new java.awt.Color(42, 82, 201));
 
-        bt_loginADM.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
-        bt_loginADM.setText("Login ADM");
-        bt_loginADM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_loginADMActionPerformed(evt);
-            }
-        });
-
-        bt_cadastrar.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
-        bt_cadastrar.setText("Cadastrar");
-        bt_cadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_cadastrarActionPerformed(evt);
-            }
-        });
-
-        txt_nomeLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_nomeLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nomeLoginActionPerformed(evt);
-            }
-        });
-
-        txt_senhaLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_senhaLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_senhaLoginActionPerformed(evt);
-            }
-        });
+        lbl_tituloLogin.setBackground(new java.awt.Color(42, 82, 201));
+        lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_tituloLogin.setText("Login");
+        lbl_tituloLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
         lbl_nomeLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lbl_nomeLogin.setText("Usuário: ");
@@ -163,69 +135,121 @@ public class telaLogCad extends javax.swing.JFrame {
         lbl_senhaLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lbl_senhaLogin.setText("Senha: ");
 
-        lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
-        lbl_tituloLogin.setText("Login");
+        txt_nomeLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_nomeLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        txt_nomeLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nomeLoginActionPerformed(evt);
+            }
+        });
+
+        txt_senhaLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_senhaLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        txt_senhaLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_senhaLoginActionPerformed(evt);
+            }
+        });
+
+        bt_loginADM.setBackground(new java.awt.Color(102, 255, 102));
+        bt_loginADM.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_loginADM.setText("Login ADM");
+        bt_loginADM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_loginADM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_loginADMActionPerformed(evt);
+            }
+        });
+
+        bt_loginUsuario.setBackground(new java.awt.Color(102, 255, 102));
+        bt_loginUsuario.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_loginUsuario.setText("Login Usuário");
+        bt_loginUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_loginUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_loginUsuarioActionPerformed(evt);
+            }
+        });
+
+        bt_cadastrar.setBackground(new java.awt.Color(102, 255, 102));
+        bt_cadastrar.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_cadastrar.setText("Cadastrar");
+        bt_cadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_cadastrarActionPerformed(evt);
+            }
+        });
 
         txt_textoAviso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_textoAviso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
         txt_textoAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_textoAvisoActionPerformed(evt);
             }
         });
 
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addComponent(bt_loginADM)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bt_loginUsuario)
+                        .addGap(54, 54, 54)
+                        .addComponent(bt_cadastrar))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lbl_nomeLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_senhaLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_textoAviso)
+                    .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_nomeLogin)
+                    .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_senhaLogin)
+                    .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_cadastrar)
+                    .addComponent(bt_loginUsuario)
+                    .addComponent(bt_loginADM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_textoAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bt_loginADM)
-                        .addGap(27, 27, 27)
-                        .addComponent(bt_loginUsuario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bt_cadastrar)
-                        .addGap(41, 41, 41))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_nomeLogin)
-                            .addComponent(lbl_senhaLogin))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txt_textoAviso)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(lbl_tituloLogin)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_nomeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_nomeLogin))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_senhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_senhaLogin))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_loginUsuario)
-                    .addComponent(bt_loginADM)
-                    .addComponent(bt_cadastrar))
-                .addGap(18, 18, 18)
-                .addComponent(txt_textoAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -295,9 +319,11 @@ public class telaLogCad extends javax.swing.JFrame {
     private javax.swing.JButton bt_cadastrar;
     private javax.swing.JButton bt_loginADM;
     private javax.swing.JButton bt_loginUsuario;
+    private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JLabel lbl_nomeLogin;
     private javax.swing.JLabel lbl_senhaLogin;
     private javax.swing.JLabel lbl_tituloLogin;
+    private java.awt.Panel panel1;
     private javax.swing.JTextField txt_nomeLogin;
     private javax.swing.JTextField txt_senhaLogin;
     private javax.swing.JTextField txt_textoAviso;
