@@ -14,6 +14,12 @@ public class SourceMusDAO {
         this.conn = conn;
     }    
     
+    /**
+     * Consulta uma música pelo nome, retornando seus detalhes junto com o nome do artista.
+     *
+     * @param nome Nome da música a ser consultada
+     * @return Objeto SourMus com os dados da música, ou null caso não encontrada
+     */
     public SourMus consultarMus(String nome) {
         String sql = "SELECT m.nome_musica, m.ano, m.genero, p.nome AS nomeArtista\n" +
                      "FROM musica m\n" +
@@ -28,7 +34,7 @@ public class SourceMusDAO {
 
             if (rs.next()) {
                 SourMus musica = new SourMus();
-                musica.setNome_musica("nome_musica");
+                musica.setNome_musica(rs.getString("nome_musica"));
                 musica.setAno(rs.getInt("ano"));
                 musica.setArtista(rs.getString("nomeArtista"));
                 musica.setGenero(rs.getString("genero"));

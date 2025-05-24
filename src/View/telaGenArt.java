@@ -170,6 +170,7 @@ public class telaGenArt extends javax.swing.JFrame {
 
         bt_cadArtGenArt.setBackground(new java.awt.Color(42, 82, 201));
         bt_cadArtGenArt.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_cadArtGenArt.setForeground(new java.awt.Color(255, 255, 255));
         bt_cadArtGenArt.setText("Cadastrar");
         bt_cadArtGenArt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
         bt_cadArtGenArt.addActionListener(new java.awt.event.ActionListener() {

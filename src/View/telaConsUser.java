@@ -177,7 +177,6 @@ public class telaConsUser extends javax.swing.JFrame {
 
         txt_ConsNomeUser.setBackground(new java.awt.Color(204, 204, 204));
         txt_ConsNomeUser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_ConsNomeUser.setForeground(new java.awt.Color(255, 255, 255));
         txt_ConsNomeUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_ConsNomeUserActionPerformed(evt);

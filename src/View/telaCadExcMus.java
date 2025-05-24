@@ -363,6 +363,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
         bt_cadMus.setBackground(new java.awt.Color(42, 82, 201));
         bt_cadMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_cadMus.setForeground(new java.awt.Color(255, 255, 255));
         bt_cadMus.setText("Cadastrar");
         bt_cadMus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -483,6 +484,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
         bt_consMusIdMus.setBackground(new java.awt.Color(42, 82, 201));
         bt_consMusIdMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_consMusIdMus.setForeground(new java.awt.Color(255, 255, 255));
         bt_consMusIdMus.setText("Consultar");
         bt_consMusIdMus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

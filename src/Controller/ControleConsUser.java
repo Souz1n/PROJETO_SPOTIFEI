@@ -1,4 +1,3 @@
-
 package Controller;
 
 import java.sql.Connection;
@@ -9,20 +8,31 @@ import View.telaMenuAdm;
 import DAO.ConsUserDAO;
 import DAO.Conexao;
 
+/**
+ * Controlador responsável pelas ações da tela de consulta de usuário.
+ */
 public class ControleConsUser {
     
     private telaConsUser view;
 
+    /**
+     * Construtor da classe ControleConsUser.
+     *
+     * @param view Tela de consulta de usuário.
+     */
     public ControleConsUser(telaConsUser view) {
         this.view = view;
     }
     
+    /**
+     * Realiza a consulta de um usuário no banco de dados com base no nome informado.
+     * Atualiza a tela com os dados encontrados ou exibe uma mensagem de erro.
+     */
     public void consultarUsuario() {
         String nomeUsuario = view.getTxt_ConsNomeUser().getText().trim();
         
         ConsUser consulta = new ConsUser();
         consulta.setNome(nomeUsuario);
-        
 
         try {
             Connection conn = new Conexao().getConnection();
@@ -43,10 +53,13 @@ public class ControleConsUser {
             view.getLbl_consUserResult().setText("Erro ao consultar: " + e.getMessage());
         }
     }
-     public void voltaMenu(){
+
+    /**
+     * Fecha a tela de consulta e retorna para o menu do administrador.
+     */
+    public void voltaMenu() {
         telaMenuAdm tma = new telaMenuAdm();
         tma.setVisible(true);
         view.dispose();
     }
-    
 }
