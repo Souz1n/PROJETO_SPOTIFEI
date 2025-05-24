@@ -14,6 +14,36 @@
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaCadUser.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaConsUser.java</file>
             <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaEstatisticas.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaGenArt.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaHistoricoUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaLogCad.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/View/telaHome.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleHome.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleConsUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleGenMus.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/spotifei/SPOTIFEI.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CadArtDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CadMuscDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CadUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/Conexao.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ConsMuscDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ConsUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/CurtidaDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/PlaylistDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ExcMuscDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleCadUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleHistoricoUser.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleLogin.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/Controller/ControleGenArt.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/HistoricoDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/ListarFMusDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/LoginUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/MenuUserDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/SourceArtPorIdDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/SourceMusDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/DAO/TotaisTopEstDAO.java</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/Win%2010/Documents/Projetos/PROJETO_SPOTIFEI/src/JAVADOC/JAVADOC.xml</file>
         </group>
     </open-files>
 </project-private>
