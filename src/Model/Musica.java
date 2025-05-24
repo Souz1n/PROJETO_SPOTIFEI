@@ -4,10 +4,6 @@
  */
 package Model;
 
-/**
- *
- * @author Win 10
- */
 public class Musica {
 
     private int id;
