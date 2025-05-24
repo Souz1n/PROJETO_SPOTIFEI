@@ -26,7 +26,7 @@ public class telaMenuAdm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        bt_voltarMenuAdm.setBackground(new java.awt.Color(255, 0, 0));
+        bt_voltarMenuAdm.setBackground(new java.awt.Color(204, 204, 204));
         bt_voltarMenuAdm.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_voltarMenuAdm.setText("Voltar");
         bt_voltarMenuAdm.setActionCommand("");
@@ -96,10 +96,10 @@ public class telaMenuAdm extends javax.swing.JFrame {
 
         lbl_genMus.setBackground(new java.awt.Color(0, 0, 0));
         lbl_genMus.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_genMus.setForeground(new java.awt.Color(255, 255, 255));
         lbl_genMus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_genMus.setText("Menu ADM");
         lbl_genMus.setToolTipText("");
-        lbl_genMus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -183,6 +183,7 @@ public class telaMenuAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_consUserMenuAdmActionPerformed
 
     private void bt_verEstatMenuAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_verEstatMenuAdmActionPerformed
+        cma.fechar();
         telaEstatisticas telaEst = new telaEstatisticas(); 
         ControleEstatisticas ce = new ControleEstatisticas(telaEst); 
         

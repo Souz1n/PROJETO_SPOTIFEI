@@ -123,18 +123,21 @@ public class telaLogCad extends javax.swing.JFrame {
 
         panel1.setBackground(new java.awt.Color(42, 82, 201));
 
-        lbl_tituloLogin.setBackground(new java.awt.Color(42, 82, 201));
+        lbl_tituloLogin.setBackground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloLogin.setForeground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_tituloLogin.setText("Login");
-        lbl_tituloLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
         lbl_nomeLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_nomeLogin.setForeground(new java.awt.Color(255, 255, 255));
         lbl_nomeLogin.setText("Usuário: ");
 
         lbl_senhaLogin.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_senhaLogin.setForeground(new java.awt.Color(255, 255, 255));
         lbl_senhaLogin.setText("Senha: ");
 
+        txt_nomeLogin.setBackground(new java.awt.Color(204, 204, 204));
         txt_nomeLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_nomeLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
         txt_nomeLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +146,7 @@ public class telaLogCad extends javax.swing.JFrame {
             }
         });
 
+        txt_senhaLogin.setBackground(new java.awt.Color(204, 204, 204));
         txt_senhaLogin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_senhaLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
         txt_senhaLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -151,36 +155,40 @@ public class telaLogCad extends javax.swing.JFrame {
             }
         });
 
-        bt_loginADM.setBackground(new java.awt.Color(102, 255, 102));
+        bt_loginADM.setBackground(new java.awt.Color(0, 0, 0));
         bt_loginADM.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_loginADM.setForeground(new java.awt.Color(255, 255, 255));
         bt_loginADM.setText("Login ADM");
-        bt_loginADM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_loginADM.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_loginADM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_loginADMActionPerformed(evt);
             }
         });
 
-        bt_loginUsuario.setBackground(new java.awt.Color(102, 255, 102));
+        bt_loginUsuario.setBackground(new java.awt.Color(0, 0, 0));
         bt_loginUsuario.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_loginUsuario.setForeground(new java.awt.Color(255, 255, 255));
         bt_loginUsuario.setText("Login Usuário");
-        bt_loginUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_loginUsuario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_loginUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_loginUsuarioActionPerformed(evt);
             }
         });
 
-        bt_cadastrar.setBackground(new java.awt.Color(102, 255, 102));
+        bt_cadastrar.setBackground(new java.awt.Color(0, 0, 0));
         bt_cadastrar.setFont(new java.awt.Font("Leelawadee", 3, 14)); // NOI18N
+        bt_cadastrar.setForeground(new java.awt.Color(255, 255, 255));
         bt_cadastrar.setText("Cadastrar");
-        bt_cadastrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        bt_cadastrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_cadastrarActionPerformed(evt);
             }
         });
 
+        txt_textoAviso.setBackground(new java.awt.Color(204, 204, 204));
         txt_textoAviso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_textoAviso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
         txt_textoAviso.addActionListener(new java.awt.event.ActionListener() {
@@ -199,8 +207,8 @@ public class telaLogCad extends javax.swing.JFrame {
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addComponent(bt_loginADM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bt_loginUsuario)
-                        .addGap(54, 54, 54)
+                        .addComponent(bt_loginUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
                         .addComponent(bt_cadastrar))
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -236,9 +244,9 @@ public class telaLogCad extends javax.swing.JFrame {
                     .addComponent(bt_cadastrar)
                     .addComponent(bt_loginUsuario)
                     .addComponent(bt_loginADM))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_textoAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGap(18, 18, 18)
+                .addComponent(txt_textoAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

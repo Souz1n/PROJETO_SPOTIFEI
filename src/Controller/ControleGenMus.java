@@ -15,29 +15,29 @@ public class ControleGenMus {
         this.view = view;
     }
     
-public void cadastrarMusica() {
-    String nome = view.getTxt_cadMusNam().getText();
-    String genero = view.getTxt_cadMusGener().getText();
-    int ano = Integer.parseInt(view.getTxt_cadMusAno().getText());
-    String nomeArtista = view.getTxt_cadMusArt().getText();
+    public void cadastrarMusica() {
+        String nome = view.getTxt_cadMusNam().getText();
+        String genero = view.getTxt_cadMusGener().getText();
+        int ano = Integer.parseInt(view.getTxt_cadMusAno().getText());
+        String nomeArtista = view.getTxt_cadMusArt().getText();
 
-    try (Connection conn = new Conexao().getConnection()) {
-        SourceArtPorIdDAO artistaDAO = new SourceArtPorIdDAO(conn);
-        int idArtista = artistaDAO.buscarIdArtistaPorNome(nomeArtista);
-        if (idArtista == -1) {
-            view.getLbl_cadMusResult().setText("Artista não encontrado!");
-            return;
+        try (Connection conn = new Conexao().getConnection()) {
+            SourceArtPorIdDAO artistaDAO = new SourceArtPorIdDAO(conn);
+            int idArtista = artistaDAO.buscarIdArtistaPorNome(nomeArtista);
+            if (idArtista == -1) {
+                view.getLbl_cadMusResult().setText("Artista não encontrado!");
+                return;
+            }
+
+            CadMus musica = new CadMus(nome, genero, ano, idArtista);
+            CadMuscDAO musicaDAO = new CadMuscDAO(conn);
+            musicaDAO.inserir(musica);
+
+            view.getLbl_cadMusResult().setText("Música cadastrada com sucesso!");
+        } catch (SQLException e) {
+            view.getLbl_cadMusResult().setText("Erro: " + e.getMessage());
         }
-
-        CadMus musica = new CadMus(nome, genero, ano, idArtista);
-        CadMuscDAO musicaDAO = new CadMuscDAO(conn);
-        musicaDAO.inserir(musica);
-
-        view.getLbl_cadMusResult().setText("Música cadastrada com sucesso!");
-    } catch (SQLException e) {
-        view.getLbl_cadMusResult().setText("Erro: " + e.getMessage());
     }
-}
     
     public void removerMusica(){
     int id_musica = Integer.parseInt(view.getTxt_excMusIdMus().
@@ -57,6 +57,7 @@ public void cadastrarMusica() {
         catch(SQLException e){
             view.getLbl_excMusResult().setText("Erro ao excluir musica:" + 
                     e.getMessage());
+            System.out.println("erro; " + e.getMessage());
         }
     }
     

@@ -18,7 +18,7 @@ public class ConsUserDAO {
         String sql = "SELECT p.email, u.senha " +
                      "FROM pessoa p " +
                      "JOIN usuario u ON p.id = u.id_pessoa " +
-                     "WHERE p.nome = ?";
+                     "WHERE p.nome = ? ";
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, nome);

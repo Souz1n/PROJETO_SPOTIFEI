@@ -14,7 +14,7 @@ public class ExcMuscDAO {
 
     public void remover(ExcMus musica) throws SQLException {
         try (conn) {
-            String sql = "DELETE FROM musica WHERE id_musica = ?";
+            String sql = "DELETE FROM musica WHERE id = ?";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setInt(1, musica.getId_Musica());
             statement.execute(); 

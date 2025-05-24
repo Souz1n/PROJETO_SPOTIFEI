@@ -107,4 +107,8 @@ public void carregarTop5Musicas() {
         }
     }    
     
+    public void fechar() {
+        view.dispose();
+    }
+    
 }

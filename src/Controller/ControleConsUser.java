@@ -18,7 +18,7 @@ public class ControleConsUser {
     }
     
     public void consultarUsuario() {
-        String nomeUsuario = view.getTxt_ConsNomeUser().getText();
+        String nomeUsuario = view.getTxt_ConsNomeUser().getText().trim();
         
         ConsUser consulta = new ConsUser();
         consulta.setNome(nomeUsuario);

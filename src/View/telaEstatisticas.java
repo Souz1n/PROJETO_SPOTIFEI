@@ -118,10 +118,14 @@ public class telaEstatisticas extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(42, 82, 201));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
+        lbl_tituloLogin.setBackground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloLogin.setForeground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setText("ESTATÍSTICAS");
 
+        lbl_top5MusLik.setBackground(new java.awt.Color(255, 255, 255));
         lbl_top5MusLik.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_top5MusLik.setForeground(new java.awt.Color(255, 255, 255));
         lbl_top5MusLik.setText("Musicas Mais Curtidas no Spotifei");
 
         jlist_top5Mus.setBackground(new java.awt.Color(0, 0, 0));
@@ -134,7 +138,9 @@ public class telaEstatisticas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jlist_top5Mus);
 
+        lbl_top5MusDes.setBackground(new java.awt.Color(255, 255, 255));
         lbl_top5MusDes.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_top5MusDes.setForeground(new java.awt.Color(255, 255, 255));
         lbl_top5MusDes.setText("Musicas Menos Curtidas no Spotifei");
 
         jlist_top5MusDes.setBackground(new java.awt.Color(0, 0, 0));
@@ -158,14 +164,13 @@ public class telaEstatisticas extends javax.swing.JFrame {
         lbl_totMusEst.setForeground(new java.awt.Color(255, 255, 255));
         lbl_totMusEst.setText("Total de Músicas Hoje: ");
 
-        lbl_totUserEstRes.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_totUserEstRes.setBackground(new java.awt.Color(204, 204, 204));
         lbl_totUserEstRes.setFont(new java.awt.Font("Swis721 Cn BT", 0, 12)); // NOI18N
-        lbl_totUserEstRes.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_totUserEstRes.setForeground(new java.awt.Color(204, 204, 204));
         lbl_totUserEstRes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
-        lbl_totMusEstRes.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_totMusEstRes.setBackground(new java.awt.Color(204, 204, 204));
         lbl_totMusEstRes.setFont(new java.awt.Font("Swis721 Cn BT", 0, 12)); // NOI18N
-        lbl_totMusEstRes.setForeground(new java.awt.Color(255, 255, 255));
         lbl_totMusEstRes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
         javax.swing.GroupLayout jp_totaisLayout = new javax.swing.GroupLayout(jp_totais);
@@ -203,8 +208,9 @@ public class telaEstatisticas extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        bt_voltarEst.setBackground(new java.awt.Color(255, 0, 0));
+        bt_voltarEst.setBackground(new java.awt.Color(0, 0, 0));
         bt_voltarEst.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarEst.setForeground(new java.awt.Color(255, 255, 255));
         bt_voltarEst.setText("Voltar");
         bt_voltarEst.setActionCommand("");
         bt_voltarEst.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
@@ -230,7 +236,7 @@ public class telaEstatisticas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(356, 356, 356)
                 .addComponent(lbl_top5MusDes)
-                .addGap(56, 73, Short.MAX_VALUE))
+                .addGap(56, 61, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,11 +276,14 @@ public class telaEstatisticas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

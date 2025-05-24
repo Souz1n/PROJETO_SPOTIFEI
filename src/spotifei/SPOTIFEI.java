@@ -1,11 +1,11 @@
 package spotifei;
 
-import View.telaLogCad;
+import View.telaHome;
 
 public class SPOTIFEI {
 
     public static void main(String[] args) {
-        telaLogCad tl = new telaLogCad();
-        tl.setVisible(true);
+        telaHome th = new telaHome();
+        th.setVisible(true);
     }
 }

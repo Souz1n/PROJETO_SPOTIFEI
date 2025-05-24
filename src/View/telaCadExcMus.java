@@ -298,8 +298,9 @@ public class telaCadExcMus extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(42, 82, 201));
 
-        bt_voltarGerMus.setBackground(new java.awt.Color(255, 0, 0));
+        bt_voltarGerMus.setBackground(new java.awt.Color(0, 0, 0));
         bt_voltarGerMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarGerMus.setForeground(new java.awt.Color(255, 255, 255));
         bt_voltarGerMus.setText("Voltar");
         bt_voltarGerMus.setActionCommand("");
         bt_voltarGerMus.addActionListener(new java.awt.event.ActionListener() {
@@ -309,6 +310,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         });
 
         lbl_genMus.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_genMus.setForeground(new java.awt.Color(255, 255, 255));
         lbl_genMus.setText("Gerenciamento de Músicas");
 
         jf_CadMus.setBackground(new java.awt.Color(0, 0, 0));
@@ -335,6 +337,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_cadMusYear.setForeground(new java.awt.Color(255, 255, 255));
         lbl_cadMusYear.setText("Ano");
 
+        txt_cadMusArt.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadMusArt.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadMusArt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,6 +345,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
             }
         });
 
+        txt_cadMusNam.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadMusNam.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadMusNam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,6 +353,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
             }
         });
 
+        txt_cadMusAno.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadMusAno.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadMusAno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,7 +361,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
             }
         });
 
-        bt_cadMus.setBackground(new java.awt.Color(0, 255, 0));
+        bt_cadMus.setBackground(new java.awt.Color(42, 82, 201));
         bt_cadMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_cadMus.setText("Cadastrar");
         bt_cadMus.addActionListener(new java.awt.event.ActionListener() {
@@ -372,6 +377,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_cadMusGener.setForeground(new java.awt.Color(255, 255, 255));
         lbl_cadMusGener.setText("Gênero");
 
+        txt_cadMusGener.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadMusGener.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadMusGener.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -455,6 +461,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_consMusArt.setForeground(new java.awt.Color(255, 255, 255));
         lbl_consMusArt.setText("Artista");
 
+        txt_consMusArt.setBackground(new java.awt.Color(204, 204, 204));
         txt_consMusArt.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_consMusArt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -466,6 +473,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_consMusIdMus.setForeground(new java.awt.Color(255, 255, 255));
         lbl_consMusIdMus.setText("ID da Música");
 
+        txt_consMusNam.setBackground(new java.awt.Color(204, 204, 204));
         txt_consMusNam.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_consMusNam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -473,7 +481,7 @@ public class telaCadExcMus extends javax.swing.JFrame {
             }
         });
 
-        bt_consMusIdMus.setBackground(new java.awt.Color(0, 255, 0));
+        bt_consMusIdMus.setBackground(new java.awt.Color(42, 82, 201));
         bt_consMusIdMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_consMusIdMus.setText("Consultar");
         bt_consMusIdMus.addActionListener(new java.awt.event.ActionListener() {
@@ -485,15 +493,18 @@ public class telaCadExcMus extends javax.swing.JFrame {
         lbl_consMusResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
         lbl_consMusResult.setForeground(new java.awt.Color(255, 255, 255));
 
-        jf_ExcMus.setBackground(new java.awt.Color(255, 0, 0));
+        jf_ExcMus.setBackground(new java.awt.Color(42, 82, 201));
         jf_ExcMus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
+        lbl_excMusTitle.setBackground(new java.awt.Color(255, 255, 255));
         lbl_excMusTitle.setFont(new java.awt.Font("Swis721 Cn BT", 1, 18)); // NOI18N
+        lbl_excMusTitle.setForeground(new java.awt.Color(255, 255, 255));
         lbl_excMusTitle.setText("Excluir Música");
 
         lbl_excMusIdMus.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
         lbl_excMusIdMus.setText("ID da Música");
 
+        txt_excMusIdMus.setBackground(new java.awt.Color(204, 204, 204));
         txt_excMusIdMus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_excMusIdMus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -501,8 +512,9 @@ public class telaCadExcMus extends javax.swing.JFrame {
             }
         });
 
-        bt_excMus.setBackground(new java.awt.Color(0, 255, 0));
+        bt_excMus.setBackground(new java.awt.Color(0, 0, 0));
         bt_excMus.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_excMus.setForeground(new java.awt.Color(255, 255, 255));
         bt_excMus.setText("Excluir");
         bt_excMus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -519,30 +531,30 @@ public class telaCadExcMus extends javax.swing.JFrame {
         jf_ExcMusLayout.setHorizontalGroup(
             jf_ExcMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jf_ExcMusLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lbl_excMusIdMus)
-                .addGap(18, 18, 18)
-                .addComponent(txt_excMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(jf_ExcMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
-                        .addComponent(lbl_excMusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(133, 133, 133))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
-                        .addComponent(bt_excMus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
+                        .addGap(0, 90, Short.MAX_VALUE)
                         .addComponent(lbl_excMusResult, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))))
+                        .addGap(33, 33, 33))
+                    .addGroup(jf_ExcMusLayout.createSequentialGroup()
+                        .addComponent(lbl_excMusIdMus)
+                        .addGap(18, 18, 18)
+                        .addGroup(jf_ExcMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_excMusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_excMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_ExcMusLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_excMus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(129, 129, 129))
         );
         jf_ExcMusLayout.setVerticalGroup(
             jf_ExcMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jf_ExcMusLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbl_excMusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(29, 29, 29)
                 .addGroup(jf_ExcMusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_excMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_excMusIdMus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))

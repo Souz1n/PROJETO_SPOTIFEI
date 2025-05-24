@@ -36,4 +36,7 @@ public class ControleMenuAdm {
         view.dispose();//fecha o menu
     }
     
+    public void fechar() {
+        view.dispose();
+    }
 }

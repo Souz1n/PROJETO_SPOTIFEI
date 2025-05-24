@@ -330,7 +330,6 @@ public class telaPlaylistUser extends javax.swing.JFrame {
         lbl_tituloEditPlaylist = new javax.swing.JLabel();
         lbl_editPlaylNam = new javax.swing.JLabel();
         bt_ediPlaylist = new javax.swing.JButton();
-        lbl_ediCriarPRes = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jl_editPlaylist = new javax.swing.JList<>();
         jp_editMusP = new javax.swing.JPanel();
@@ -342,6 +341,7 @@ public class telaPlaylistUser extends javax.swing.JFrame {
         lbl_editPlayRes = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jl_musPlaylist = new javax.swing.JList<>();
+        lbl_ediCriarPRes = new javax.swing.JLabel();
         jp_criarPlaylist = new javax.swing.JPanel();
         bt_voltarMenuUser1 = new javax.swing.JButton();
         lbl_tituloCriaPlaylist = new javax.swing.JLabel();
@@ -378,8 +378,6 @@ public class telaPlaylistUser extends javax.swing.JFrame {
                 bt_ediPlaylistActionPerformed(evt);
             }
         });
-
-        lbl_ediCriarPRes.setForeground(new java.awt.Color(255, 255, 255));
 
         jl_editPlaylist.setBackground(new java.awt.Color(204, 204, 204));
         jl_editPlaylist.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -442,21 +440,19 @@ public class telaPlaylistUser extends javax.swing.JFrame {
         jp_editMusP.setLayout(jp_editMusPLayout);
         jp_editMusPLayout.setHorizontalGroup(
             jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_editMusPLayout.createSequentialGroup()
-                .addGap(0, 68, Short.MAX_VALUE)
-                .addComponent(lbl_editPlayRes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_editMusPLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jp_editMusPLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_editPlaylTit, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_delMusPlay)
-                    .addGroup(jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lbl_editPlaylNameMus, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nameMusPlaylistEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                        .addComponent(bt_insMusPlay)
-                        .addComponent(jScrollPane4)))
-                .addGap(86, 86, 86))
+                    .addComponent(lbl_editPlayRes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lbl_editPlaylTit, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bt_delMusPlay)
+                        .addGroup(jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lbl_editPlaylNameMus, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_nameMusPlaylistEdit)
+                            .addComponent(bt_insMusPlay)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(63, 63, 63))
         );
         jp_editMusPLayout.setVerticalGroup(
             jp_editMusPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -478,6 +474,8 @@ public class telaPlaylistUser extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        lbl_ediCriarPRes.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jp_editarPlaylistLayout = new javax.swing.GroupLayout(jp_editarPlaylist);
         jp_editarPlaylist.setLayout(jp_editarPlaylistLayout);
         jp_editarPlaylistLayout.setHorizontalGroup(
@@ -488,18 +486,18 @@ public class telaPlaylistUser extends javax.swing.JFrame {
                         .addGap(83, 83, 83)
                         .addGroup(jp_editarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_editarPlaylistLayout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(lbl_editPlaylNam))
+                                .addGap(71, 71, 71)
+                                .addComponent(bt_ediPlaylist))
+                            .addComponent(lbl_tituloEditPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jp_editMusP, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jp_editarPlaylistLayout.createSequentialGroup()
-                                .addComponent(bt_ediPlaylist)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_tituloEditPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(11, 11, 11)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jp_editarPlaylistLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jp_editMusP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addGap(131, 131, 131)
+                        .addComponent(lbl_editPlaylNam)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         jp_editarPlaylistLayout.setVerticalGroup(
             jp_editarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -510,13 +508,12 @@ public class telaPlaylistUser extends javax.swing.JFrame {
                 .addComponent(lbl_editPlaylNam, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp_editarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bt_ediPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(bt_ediPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jp_editMusP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_ediCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jp_criarPlaylist.setBackground(new java.awt.Color(42, 82, 201));
@@ -564,24 +561,20 @@ public class telaPlaylistUser extends javax.swing.JFrame {
             jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_criarPlaylistLayout.createSequentialGroup()
                 .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jp_criarPlaylistLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(bt_voltarMenuUser1)
-                        .addGap(42, 42, 42)
-                        .addComponent(lbl_genCriarPRes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_criarPlaylistLayout.createSequentialGroup()
-                        .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_criarPlaylistLayout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addComponent(lbl_tituloCriaPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_criarPlaylistLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_criarPlayNam, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_genPlaylNam)
-                                    .addComponent(bt_criarPlaylist1))))
-                        .addGap(0, 26, Short.MAX_VALUE)))
-                .addGap(46, 46, 46))
+                        .addGap(16, 16, 16)
+                        .addComponent(bt_voltarMenuUser1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_criarPlaylistLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lbl_tituloCriaPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_criarPlaylistLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_criarPlayNam, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_genPlaylNam)
+                            .addComponent(bt_criarPlaylist1)
+                            .addComponent(lbl_genCriarPRes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(46, 72, Short.MAX_VALUE))
         );
         jp_criarPlaylistLayout.setVerticalGroup(
             jp_criarPlaylistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -594,7 +587,7 @@ public class telaPlaylistUser extends javax.swing.JFrame {
                 .addComponent(txt_criarPlayNam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bt_criarPlaylist1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(28, 28, 28)
                 .addComponent(lbl_genCriarPRes, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_voltarMenuUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -684,12 +677,9 @@ public class telaPlaylistUser extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jp_editarPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jp_criarPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jp_editPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jp_editarPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_criarPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_editPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

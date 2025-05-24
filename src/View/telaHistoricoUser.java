@@ -125,24 +125,45 @@ public class telaHistoricoUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         lbl_tituloLogin = new javax.swing.JLabel();
+        lbl_busMusHist = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jl_buscaMusHist = new javax.swing.JList<>();
+        lbl_busCurtHist = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jl_buscaCurtHist = new javax.swing.JList<>();
+        lbl_busDescHist = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jl_buscaDescHist = new javax.swing.JList<>();
-        lbl_busMusHist = new javax.swing.JLabel();
-        lbl_busCurtHist = new javax.swing.JLabel();
-        lbl_busDescHist = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         bt_voltarLog = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(42, 82, 201));
+
+        jButton2.setBackground(new java.awt.Color(42, 82, 201));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/img_refresh_s.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        lbl_tituloLogin.setBackground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloLogin.setForeground(new java.awt.Color(255, 255, 255));
         lbl_tituloLogin.setText("Histórico");
 
+        lbl_busMusHist.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_busMusHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busMusHist.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_busMusHist.setText("Histórico Buscas");
+        lbl_busMusHist.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jl_buscaMusHist.setBackground(new java.awt.Color(204, 204, 204));
         jl_buscaMusHist.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -150,6 +171,12 @@ public class telaHistoricoUser extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(jl_buscaMusHist);
 
+        lbl_busCurtHist.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_busCurtHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busCurtHist.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_busCurtHist.setText("Históricos Curtidas");
+
+        jl_buscaCurtHist.setBackground(new java.awt.Color(204, 204, 204));
         jl_buscaCurtHist.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -157,6 +184,12 @@ public class telaHistoricoUser extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(jl_buscaCurtHist);
 
+        lbl_busDescHist.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_busDescHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_busDescHist.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_busDescHist.setText("Histórico Descurtidas");
+
+        jl_buscaDescHist.setBackground(new java.awt.Color(204, 204, 204));
         jl_buscaDescHist.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -164,19 +197,9 @@ public class telaHistoricoUser extends javax.swing.JFrame {
         });
         jScrollPane6.setViewportView(jl_buscaDescHist);
 
-        lbl_busMusHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_busMusHist.setText("Histórico Buscas");
-        lbl_busMusHist.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        lbl_busCurtHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_busCurtHist.setText("Históricos Curtidas");
-
-        lbl_busDescHist.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_busDescHist.setText("Histórico Descurtidas");
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/img_refresh.png"))); // NOI18N
-
+        bt_voltarLog.setBackground(new java.awt.Color(0, 0, 0));
         bt_voltarLog.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarLog.setForeground(new java.awt.Color(255, 255, 255));
         bt_voltarLog.setText("Voltar");
         bt_voltarLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,36 +207,39 @@ public class telaHistoricoUser extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_busMusHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_busCurtHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_busDescHist))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bt_voltarLog)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(bt_voltarLog))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_busMusHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_busCurtHist, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_busDescHist))
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_tituloLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addComponent(lbl_busMusHist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -225,9 +251,20 @@ public class telaHistoricoUser extends javax.swing.JFrame {
                 .addComponent(lbl_busDescHist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -236,6 +273,12 @@ public class telaHistoricoUser extends javax.swing.JFrame {
     private void bt_voltarLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_voltarLogActionPerformed
         chu.voltarLog();
     }//GEN-LAST:event_bt_voltarLogActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        chu.carregarPlaylistCurtida();
+        chu.carregarPlaylistMusica();
+        chu.carregarPlaylistDescurtida();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,6 +320,7 @@ public class telaHistoricoUser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_voltarLog;
     private javax.swing.JButton jButton2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;

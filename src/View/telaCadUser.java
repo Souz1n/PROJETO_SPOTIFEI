@@ -118,24 +118,34 @@ public class telaCadUser extends javax.swing.JFrame {
     private void initComponents() {
 
         jComboBox1 = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
         javax.swing.JLabel lbl_tituloCadUser = new javax.swing.JLabel();
-        txt_cadUserNome = new javax.swing.JTextField();
-        txt_cadUserEmail = new javax.swing.JTextField();
         lbl_cadUserNome = new javax.swing.JLabel();
+        txt_cadUserNome = new javax.swing.JTextField();
         lbl_cadUserEmail = new javax.swing.JLabel();
+        txt_cadUserEmail = new javax.swing.JTextField();
+        lbl_cadUserSenha = new javax.swing.JLabel();
+        txt_cadUserSenha = new javax.swing.JTextField();
         bt_cadUser = new javax.swing.JButton();
         bt_voltarCadUser = new javax.swing.JButton();
         lbl_cadUserResult = new javax.swing.JLabel();
-        lbl_cadUserSenha = new javax.swing.JLabel();
-        txt_cadUserSenha = new javax.swing.JTextField();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(42, 82, 201));
+
+        lbl_tituloCadUser.setBackground(new java.awt.Color(255, 255, 255));
         lbl_tituloCadUser.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lbl_tituloCadUser.setForeground(new java.awt.Color(255, 255, 255));
         lbl_tituloCadUser.setText("CADASTRAR USUÁRIOS");
 
+        lbl_cadUserNome.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserNome.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_cadUserNome.setText("Nome:");
+
+        txt_cadUserNome.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadUserNome.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadUserNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +153,11 @@ public class telaCadUser extends javax.swing.JFrame {
             }
         });
 
+        lbl_cadUserEmail.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserEmail.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_cadUserEmail.setText("Email:");
+
+        txt_cadUserEmail.setBackground(new java.awt.Color(204, 204, 204));
         txt_cadUserEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txt_cadUserEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,13 +165,21 @@ public class telaCadUser extends javax.swing.JFrame {
             }
         });
 
-        lbl_cadUserNome.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadUserNome.setText("Nome:");
+        lbl_cadUserSenha.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbl_cadUserSenha.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_cadUserSenha.setText("Senha:");
 
-        lbl_cadUserEmail.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadUserEmail.setText("Email:");
+        txt_cadUserSenha.setBackground(new java.awt.Color(204, 204, 204));
+        txt_cadUserSenha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_cadUserSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_cadUserSenhaActionPerformed(evt);
+            }
+        });
 
+        bt_cadUser.setBackground(new java.awt.Color(0, 0, 0));
         bt_cadUser.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_cadUser.setForeground(new java.awt.Color(255, 255, 255));
         bt_cadUser.setText("CADASTRAR");
         bt_cadUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +187,9 @@ public class telaCadUser extends javax.swing.JFrame {
             }
         });
 
+        bt_voltarCadUser.setBackground(new java.awt.Color(0, 0, 0));
         bt_voltarCadUser.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
+        bt_voltarCadUser.setForeground(new java.awt.Color(255, 255, 255));
         bt_voltarCadUser.setText("Voltar");
         bt_voltarCadUser.setActionCommand("");
         bt_voltarCadUser.addActionListener(new java.awt.event.ActionListener() {
@@ -175,73 +200,79 @@ public class telaCadUser extends javax.swing.JFrame {
 
         lbl_cadUserResult.setFont(new java.awt.Font("Swis721 Cn BT", 1, 14)); // NOI18N
 
-        lbl_cadUserSenha.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        lbl_cadUserSenha.setText("Senha:");
-
-        txt_cadUserSenha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_cadUserSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cadUserSenhaActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbl_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lbl_cadUserEmail))
+                                    .addGap(19, 19, 19)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lbl_tituloCadUser)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(lbl_cadUserSenha)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(bt_cadUser)
+                                .addGap(68, 68, 68))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_tituloCadUser)
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cadUserNome)
+                    .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cadUserEmail)
+                    .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cadUserSenha)
+                    .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(bt_cadUser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 169, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_cadUserEmail))
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lbl_tituloCadUser)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_cadUserSenha)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(73, 73, 73))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_cadUser)
-                .addGap(223, 223, 223))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(lbl_tituloCadUser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cadUserNome)
-                    .addComponent(txt_cadUserNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cadUserEmail)
-                    .addComponent(txt_cadUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_cadUserSenha)
-                    .addComponent(txt_cadUserSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addComponent(bt_cadUser)
-                .addGap(27, 27, 27)
-                .addComponent(lbl_cadUserResult, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
-                .addComponent(bt_voltarCadUser, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -308,6 +339,7 @@ public class telaCadUser extends javax.swing.JFrame {
     private javax.swing.JButton bt_cadUser;
     private javax.swing.JButton bt_voltarCadUser;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_cadUserEmail;
     private javax.swing.JLabel lbl_cadUserNome;
     private javax.swing.JLabel lbl_cadUserResult;
