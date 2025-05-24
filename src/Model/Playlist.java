@@ -2,7 +2,7 @@ package Model;
 
 public class Playlist {
     public int id_usuario;
-    public int id_playlist;
+    public static int id_playlist;
     public String nome;
 
     public Playlist() {}
@@ -13,6 +13,13 @@ public class Playlist {
         this.nome = nomePlaylist;
     }
 
+    public Playlist(int id_usuario, String nome) {
+        this.id_usuario = id_usuario;
+        this.nome = nome;
+    }
+    
+    
+
     public int getId_usuario() {
         return id_usuario;
     }
@@ -21,12 +28,12 @@ public class Playlist {
         this.id_usuario = id_usuario;
     }
 
-    public int getId_playlist() {
+    public  static int getId_playlist() {
         return id_playlist;
     }
 
-    public void setId_playlist(int id_playlist) {
-        this.id_playlist = id_playlist;
+    public static void setId_playlist(int id_playlist) {
+        Playlist.id_playlist = id_playlist;
     }
 
     public String getNome() {
@@ -37,6 +44,6 @@ public class Playlist {
         this.nome = nome;
     }
 
-    
-    
+
+
 }

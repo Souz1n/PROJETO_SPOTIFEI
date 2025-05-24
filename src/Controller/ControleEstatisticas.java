@@ -70,7 +70,8 @@ public void carregarTop5Musicas() {
 
         DefaultListModel<String> modelo = new DefaultListModel<>();
         for (Musica m : top5) {
-            String linha = String.format("%-10s %s Like", m.getNome(), m.getCurtidas());
+            String linha = String.format("%-10s %s Like", m.getNome()
+                                         , m.getCurtidas());
             modelo.addElement(linha);
         }
 
@@ -90,7 +91,9 @@ public void carregarTop5Musicas() {
 
             DefaultListModel<String> modelo = new DefaultListModel<>();
             for (Musica m : top5) {
-                String linha = String.format("%-10s %5d Deslike", m.getNome(), m.getCurtidas());
+                String linha = String.format("%-10s %5d Deslike", 
+                                           m.getNome()
+                                         , m.getCurtidas());
                 modelo.addElement(linha);
             }
 

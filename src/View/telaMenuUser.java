@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import Controller.*;
 import View.*;
 import Controller.ControlePlaylistUser;
+import Controller.ControleHistoricoUser;
 
 /**
  *
@@ -394,7 +395,7 @@ public class telaMenuUser extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(bt_voltarLog)
-                        .addGap(293, 293, 293)
+                        .addGap(56, 56, 56)
                         .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(69, 69, 69)
@@ -408,7 +409,7 @@ public class telaMenuUser extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(bt_genPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bt_genHistoricoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -428,10 +429,9 @@ public class telaMenuUser extends javax.swing.JFrame {
                         .addComponent(bt_genHistoricoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bt_voltarLog, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(bt_voltarLog, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_sourMusStatusBarra, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         pack();
@@ -478,7 +478,7 @@ public class telaMenuUser extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_genPlaylistActionPerformed
 
     private void bt_genHistoricoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_genHistoricoUserActionPerformed
-
+        cmu.fechar();
         telaHistoricoUser telaHisU = new telaHistoricoUser(); 
         ControleHistoricoUser chu = new ControleHistoricoUser(telaHisU); 
         

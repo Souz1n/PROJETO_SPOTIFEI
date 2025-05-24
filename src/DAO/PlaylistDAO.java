@@ -3,15 +3,16 @@ package DAO;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import Model.PlaylistV;
 import Model.Playlist;
+import Model.Musica;
 
 public class PlaylistDAO {
-    private final Connection conn;
+    private  Connection conn;
 
     public PlaylistDAO(Connection conn) {
         this.conn = conn;
     }
-
     public void criarPlaylist(String nome, int id_user) throws SQLException {
         String sql = "INSERT INTO playlist (nome, id_usuario) VALUES (?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -22,12 +23,17 @@ public class PlaylistDAO {
     }
     
     
-    public void removerPlaylist(Playlist musica) throws SQLException {
-        try (conn) {
-            String sql = "DELETE FROM musica WHERE id_musica = ?";
-            PreparedStatement statement = conn.prepareStatement(sql);
-//            statement.setInt(1, musica.get());
-            statement.execute(); 
+    public void removerPlaylist(Playlist playlist) throws SQLException {
+        String sql = "DELETE FROM playlist WHERE id = ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, playlist.getId_playlist()); // aqui passa o id da playlist
+
+            int rows = stmt.executeUpdate();
+
+            if (rows == 0) {
+                throw new SQLException("Nenhuma playlist encontrada para remover.");
+            }
         }
     }
 
@@ -54,8 +60,148 @@ public class PlaylistDAO {
 
         return lista;
     }
+    
+    public int consultarIdPlaylist(String nome, int id_usuario) {
+           String sql = "SELECT id FROM musica WHERE nome = ? AND id_usuario = ? ";
 
+           try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+               stmt.setString(1, nome);
+               stmt.setInt(1, id_usuario);
 
+               ResultSet rs = stmt.executeQuery();
+               if (rs.next()) {
+                   return rs.getInt("id");
+               } else {
+                   return -1; 
+               }
+           } catch (SQLException e) {
+               System.out.println("Erro ao consultar playlist: " + e.getMessage());
+               return -1;
+           }
+       }
+    
+    public List<Musica> listAllMusPlay(int id_user, int id_playlist) throws SQLException {
+        List<Musica> lista = new ArrayList<>();
+
+        String sql = "SELECT m.nome_musica\n" +
+                     "FROM playlist_musica pm\n" +
+                     "JOIN musica m ON pm.id_musica = m.id\n" +
+                     "WHERE pm.id_playlist = ? AND pm.id_usuario = ?;";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id_playlist);
+            stmt.setInt(2, id_user);  
+   
+
+            try (ResultSet rs = stmt.executeQuery()) { 
+                while (rs.next()) {
+
+                    String nome = rs.getString("nome_musica");
+
+                    lista.add(new Musica(nome));
+                }
+            }
+        }
+
+        return lista;
+    }
+    
+    public Playlist verificarPlaylist(String nomePlaylist, int id_user) {
+        Playlist playlist = null;
+        String sql = "SELECT id FROM playlist WHERE nome = ? AND id_usuario = ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, nomePlaylist);
+            stmt.setInt(2, id_user);
+
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int idPlaylist = rs.getInt("id");
+                playlist = new Playlist(id_user, nomePlaylist);
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao consultar playlist: " + e.getMessage());
+        }
+
+        return playlist;
+    }
+    
+    public boolean adicionarMusicaNaPlaylist(String nome_musica, int id_playlist, 
+        int id_user) throws SQLException {
+        String buscarMusica = "SELECT id FROM musica WHERE nome_musica = ?";
+        
+        String verificarExistencia = "SELECT 1 FROM playlist_musica "
+                                   + "WHERE id_musica = ? "
+                                   + "AND id_playlist = ? AND id_usuario = ?";
+        
+        String inserirMusica = "INSERT INTO playlist_musica "
+                             + "(id_musica, id_playlist, id_usuario) "
+                             + "VALUES (?, ?, ?)";
+
+        try (
+            PreparedStatement stmtBuscar = conn.prepareStatement(buscarMusica);
+            PreparedStatement stmtVerificar = conn.prepareStatement(verificarExistencia);
+            PreparedStatement stmtInserir = conn.prepareStatement(inserirMusica)
+        ) {
+
+            stmtBuscar.setString(1, nome_musica);
+            ResultSet rs = stmtBuscar.executeQuery();
+
+            if (rs.next()) {
+                int id_musica = rs.getInt("id");
+
+                stmtVerificar.setInt(1, id_musica);
+                stmtVerificar.setInt(2, id_playlist);
+                stmtVerificar.setInt(3, id_user);
+                ResultSet rsVerifica = stmtVerificar.executeQuery();
+
+                if (rsVerifica.next()) {
+                    System.out.println("A música já está na playlist.");
+                    return false;
+                }
+
+                stmtInserir.setInt(1, id_musica);
+                stmtInserir.setInt(2, id_playlist);
+                stmtInserir.setInt(3, id_user);
+
+                int linhasAfetadas = stmtInserir.executeUpdate();
+                return linhasAfetadas > 0;
+            } else {
+                System.out.println("Música não encontrada: " + nome_musica);
+            }
+        }
+
+        return false;
+    }
+    
+    public boolean removerMusicaNaPlaylist(String nome_musica, int id_playlist, 
+        int id_user) throws SQLException {
+        String buscarMusica = "SELECT id FROM musica WHERE nome_musica = ?";
+        String removerMusica = "DELETE FROM playlist_musica WHERE id_musica = ? "
+                             + "AND id_playlist = ? AND id_usuario = ?";
+
+        try (
+            PreparedStatement stmtBuscar = conn.prepareStatement(buscarMusica);
+            PreparedStatement stmtRemover = conn.prepareStatement(removerMusica)
+        ) {
+            stmtBuscar.setString(1, nome_musica);
+            ResultSet rs = stmtBuscar.executeQuery();
+
+            if (rs.next()) {
+                int idMusica = rs.getInt("id");
+
+                stmtRemover.setInt(1, idMusica);
+                stmtRemover.setInt(2, id_playlist);
+                stmtRemover.setInt(3, id_user);
+
+                int linhasAfetadas = stmtRemover.executeUpdate();
+                return linhasAfetadas > 0;
+            } else {
+                System.out.println("Música não encontrada DAO: " + nome_musica);
+            }
+        }
+        return false;
+    }
 
 }
 

@@ -14,7 +14,7 @@ public class ConsMuscDAO {
     }
 
     public int consultarIdMusica(String nome, String artista) {
-        String sql = "SELECT id_musica FROM musica WHERE nome_musica = ? AND "
+        String sql = "SELECT id FROM musica WHERE nome_musica = ? AND "
                 + "artista = ?";
         
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -23,7 +23,7 @@ public class ConsMuscDAO {
 
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                return rs.getInt("id_musica");
+                return rs.getInt("id");
             } else {
                 return -1; 
             }

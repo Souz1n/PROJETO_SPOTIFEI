@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Model;
 
-/**
- *
- * @author Win 10
- */
 public class Musica {
 
     private int id;
@@ -19,6 +11,12 @@ public class Musica {
         this.nome = nome;
         this.curtidas = curtidas;
     }
+
+    public Musica(String nome) {
+        this.nome = nome;
+    }
+    
+    
 
     public int getId() { return id; }
     public String getNome() { return nome; }

@@ -117,6 +117,7 @@ public class telaLogCad extends javax.swing.JFrame {
         txt_textoAviso = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 153, 255));
 
         bt_loginUsuario.setFont(new java.awt.Font("Leelawadee", 3, 12)); // NOI18N
         bt_loginUsuario.setText("Login Usuário");
